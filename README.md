@@ -22,15 +22,18 @@ Les fonctionnalités de HAL sont rendues disponibles par des services web (https
 * Définir et réaliser les tableaux de bord et les interfaces web
 
 ## Les Résultats attendus
+
 ✔	Recherche des articles en fonction de l’année<br>
   *	Option de sélection des années sous forme de liste déroulante.<br>
   *	Récupération du choix de l’utilisateur et renvoie du résultat sous forme de tableau (Titre de document, Description, date de             publication et liens)<br>
   *	Renvoie du nombre total de publication de l’année choisi.<br>
+  
 ✔	Recherche en fonction de l’équipe de chercheurs<br>
   *	Option de sélection des équipes sous forme de liste déroulante.<br>
   *	Récupération du choix de l’utilisateur et renvoie des résultats sous forme de Tableau 
   (Les documents publiés par l’équipe concernée: Titre, Description, date de publication et lien).<br>
   *	Renvoie du nombre de publications de l’équipe.<br>
+  
 ✔	Recherche en fonction Type de publication (ça peut être revue scientifique, un rapport de thèse, un journal, un livre etc.)<br>
   *	Option de sélection des types de publication sous forme de liste déroulante.<br>
   *	Récupération du choix de l’utilisateur et renvoie des résultats sous forme de Tableau (Les documents publiés par le type choisi :       Titre, Description, date de publication et lien).<br>
