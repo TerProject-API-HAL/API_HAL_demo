@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/image.jpeg">
     <title>DAVID laboratory data</title>
     <!-- Bootstrap Core CSS -->
     <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -25,7 +25,7 @@
     <link href="css/colors/blue-dark.css" id="theme" rel="stylesheet">
      <!--link href="css/spinners.css" rel="stylesheet"-->
 
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="vendor/chart.js/Chart.min.js"></script>
     <script src="meteo.js"></script>
   
@@ -74,71 +74,7 @@
                    
                     <!-- /.col-lg-12 -->
                 </div>
-                <!-- row -->
-                <div class="row">
-                    <!--col -->
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="white-box">
-                            <div class="col-in row">
-                                <div class="col-md-6 col-sm-6 col-xs-6"> <i data-icon="E" class="linea-icon linea-basic"></i>
-                                    <h4 class="text-muted vb">Total of publications</h4> </div>
-                                <div class="col-md-6 col-sm-6 col-xs-6" >
-                                    <h3 class="counter text-right m-t-15 text-danger" id="totalPub">
-                                        <script type="text/javascript">
-                                           
-                                            setTimeout(function()
-                                                {
-                                                    document.getElementById("totalPub").innerHTML = 127;
-                                                    //console.log(totalPub);
-                                            }, 3000);
-
-
-                                        </script>
-                                    </h3> </div>
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"> <span class="sr-only">40% Complete (success)</span> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.col -->
-                    <!--col -->
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="white-box">
-                            <div class="col-in row">
-                                <div class="col-md-6 col-sm-6 col-xs-6"> <i class="linea-icon linea-basic" data-icon="&#xe01b;"></i>
-                                    <h4 class="text-muted vb">Best year</h4> </div>
-                                <div class="col-md-6 col-sm-6 col-xs-6">
-                                    <h3 class="counter text-right m-t-15 text-megna" id="bestyear">2017</h3> </div>
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-megna" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"> <span class="sr-only">40% Complete (success)</span> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.col -->
-                    <!--col -->
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="white-box">
-                            <div class="col-in row">
-                                <div class="col-md-6 col-sm-6 col-xs-6"> <i class="linea-icon linea-basic" data-icon="&#xe00b;"></i>
-                                    <h4 class="text-muted vb">Current year</h4> </div>
-                                <div class="col-md-6 col-sm-6 col-xs-6">
-                                    <h3 class="counter text-right m-t-15 text-primary" id="currentYear">1</h3> </div>
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"> <span class="sr-only">40% Complete (success)</span> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.col -->
-                </div>
+            
                 <!-- Begin Page Content -->
             <div class="container-fluid" id="page">
 
@@ -221,22 +157,27 @@
             position: 'top-right',
             loaderBg: '#ff6849',
             icon: 'info',
-            hideAfter: 3500,
+            hideAfter: 4000,
             stack: 6
         })
     });
     </script>
-
-     <!-- Custom scripts for all pages-->
+    <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
- <!-- Page level plugins -->
+     <!-- Page level plugins -->
     <script src="vendor/datatables/jquery.dataTables.min.js"></script>
     <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
 
- <!-- Page level custom scripts -->
+    <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-pie-demo.js"></script>
+
 
 </body>
 

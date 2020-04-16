@@ -1,8 +1,6 @@
 // Set new default font family and font color to mimic Bootstrap's default styling
 Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
 Chart.defaults.global.defaultFontColor = '#858796';
-
-const type = ["COMM", "ART", "THESE", "HDR", "LECTURE", "POSTER", "COUV", "DOUV", "OTHER"];
 const annee = ["2016", "2017", "2018", "2019", "2020"];
 const colors = ["rgba(78, 115, 223, 1)", "rgba(0, 125, 44, 1)", "rgba(74, 125, 44, 1)",
     "rgba(74, 47, 0, 1)", "rgba(74, 0, 0, 1)", "rgba(255, 141, 170, 1)", "rgba(121, 18, 255, 1)",
@@ -46,38 +44,7 @@ $.ajax({
                 data[8] = res[key + 1];
             }
         });
-        var ctx = document.getElementById("myPieChart");
-        var myPieChart = new Chart(ctx, {
-            type: 'pie',
-            data: {
-                labels: type,
-                datasets: [
-                    {
-                        data: data,
-                        backgroundColor: colors,
-                        hoverBackgroundColor: "rgba(215, 44, 44, 1)",
-                        hoverBorderColor: "rgba(234, 236, 244, 1)",
-                    }
-                ],
-            },
-            options: {
-                maintainAspectRatio: false,
-                tooltips: {
-                    backgroundColor: "rgb(255,255,255)",
-                    bodyFontColor: "#858796",
-                    borderColor: '#dddfeb',
-                    borderWidth: 1,
-                    xPadding: 15,
-                    yPadding: 15,
-                    displayColors: false,
-                    caretPadding: 10,
-                },
-                legend: {
-                    display: true
-                },
-                cutoutPercentage: 80,
-            },
-        });
+        
     }
 });
 
@@ -90,7 +57,6 @@ $.ajax({
     success: function (data) {
         console.log();
         $("#totalPub").append(data.response.numFound + " publications");
-        $("#moyenne").append(data.response.numFound / 5 + " / an");
         var res = data.facet_counts.facet_fields.producedDateY_i;
         var data = [];
         var an;
@@ -119,7 +85,6 @@ $.ajax({
             }
             if (item == "2019") {
                 data[3] = res[key + 1];
-                $("#enCours").append(res[key + 1] + " publications");
                 if (res[key + 1] > nbr){
                     nbr = res[key + 1];
                     an = item;

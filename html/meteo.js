@@ -473,7 +473,7 @@ function fillLineChart(data) {
     var myLineChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ["2016", "2017", "2018", "2019", "2020", "TOTAUX"],
+            labels: ["2016", "2017", "2018", "2019", "2020"],
             datasets: [
                 {
                     label: type[0],
@@ -528,13 +528,7 @@ function fillLineChart(data) {
                     backgroundColor: "rgba(205, 235, 0, 0.05)",
                     borderColor: "rgba(205, 235, 0, 1)",
                     data: data[8],
-                },
-                {
-                    label: type[9],
-                    backgroundColor: "rgba(205, 235, 0, 0.05)",
-                    borderColor: "rgba(205, 235, 0, 1)",
-                    data: data[9],
-                },
+                }
             ],
         },
         options: {
@@ -669,7 +663,7 @@ function getDavid(){
         })
     ]).then(function () {
         console.log(result);
-        fillPublication();
+        //fillPublication();
         result = compact();
         fill();
         fillTab(tab);
@@ -718,7 +712,7 @@ function getAdam() {
             console.error(e)
         })
     ]).then(function () {
-        fillPublication();
+        //fillPublication();
         result = compact();
         fill();
         fillTab(tab);
@@ -767,7 +761,7 @@ function getAlmost() {
             console.error(e)
         })
     ]).then(function () {
-        fillPublication();
+        //fillPublication();
         result = compact();
         fill();
         fillTab(tab);
@@ -816,7 +810,7 @@ function getPetrus() {
             console.error(e)
         })
     ]).then(function () {
-        fillPublication();
+        //fillPublication();
         result = compact();
         fill();
         fillTab(tab);
