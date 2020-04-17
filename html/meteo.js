@@ -310,7 +310,7 @@ const ADAM = [
         prenom: "ZEMRI"
     }
 ];
-const type = ["COMM", "ART", "THESE", "HDR", "LECTURE", "POSTER", "COUV", "DOUV", "OTHER", "TOTAUX"];
+const type = ["Communication dans un congrès", "Article dans une revue", "Thèse", "High Dynamic Range", "LECTURE", "POSTER", "Chapitre d'ouvrage", "Direction d'ouvrage, Proceedings, Dossier", "Autre publication", "TOTAUX"];
 var result = [];
 var tab;
 var totalPub = 0;
@@ -373,9 +373,8 @@ function fill() {
     var totauxPublications = 0;
     for (j = 0; j < result.length; j++) {
         res = result[j].facet_counts.facet_fields.docType_s;
-        //console.log(res);
+        console.log(res);
         var totauxParAnnee = 0;
-        //console.log(res[key + 1]);
         $.each(res, function (key, item) {
             if (item == "COMM") {
                 tab[0][j] += res[key + 1];
@@ -428,8 +427,9 @@ function fill() {
             if (item == "OTHER") {
                 tab[8][j] += res[key + 1];
                 totauxOTHER += tab[8][j];
+                console.log(totauxOTHER);
                 totauxParAnnee += tab[8][j];
-                tab[8][5] += totauxOTHER;
+                tab[8][5] += tab[8][j];
             }
             tab[9][j] = totauxParAnnee;
             
@@ -660,7 +660,7 @@ function getDavid(){
             console.error(e)
         })
     ]).then(function () {
-        console.log(result);
+        //console.log(result);
         //fillPublication();
         result = compact();
         fill();
