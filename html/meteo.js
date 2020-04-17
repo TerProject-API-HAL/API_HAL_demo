@@ -314,8 +314,6 @@ const type = ["COMM", "ART", "THESE", "HDR", "LECTURE", "POSTER", "COUV", "DOUV"
 var result = [];
 var tab;
 var totalPub = 0;
-Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
-Chart.defaults.global.defaultFontColor = '#858796';
 
 function clearInner(node) {
     while (node.hasChildNodes()) {
