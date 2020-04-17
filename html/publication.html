@@ -56,54 +56,7 @@
             <!-- /.navbar-top-links -->
             <!-- /.navbar-static-side -->
         </nav>
-        <script type="text/javascript">
-                    function getDavid(){
-                        tab = [
-                            [0, 0, 0, 0, 0, 0],
-                            [0, 0, 0, 0, 0, 0],
-                            [0, 0, 0, 0, 0, 0],
-                            [0, 0, 0, 0, 0, 0],
-                            [0, 0, 0, 0, 0, 0],
-                            [0, 0, 0, 0, 0, 0],
-                            [0, 0, 0, 0, 0, 0],
-                            [0, 0, 0, 0, 0, 0],
-                            [0, 0, 0, 0, 0, 0],
-                            [0, 0, 0, 0, 0, 0]
-                        ];
-                        result = [];
-                        Promise.all([
-                            getparannee(2016, false, function (data) {
-                                console.log(data);
-                            }, function (e) {
-                                console.error(e)
-                            }),
-                            getparannee(2017, false, function (data) {
-                                console.log(data);
-                            }, function (e) {
-                                console.error(e)
-                            }),
-                            getparannee(2018, false, function (data) {
-                                console.log(data);
-                            }, function (e) {
-                                console.error(e)
-                            }),
-                            getparannee(2019, false, function (data) {
-                                console.log(data);
-                            }, function (e) {
-                                console.error(e)
-                            }),
-                            getparannee(2020, false, function (data) {
-                                console.log(data);
-                            }, function (e) {
-                                console.error(e)
-                            })
-                        ]).then(function () {
-                            console.log(result);
-                            fillPublication();
-                        })
-                    }
-                    getDavid();
-                 </script>
+        
 
         <!-- Left navbar-header -->
         <div class="navbar-default sidebar" role="navigation">
@@ -144,16 +97,16 @@
 
                          <div class="bloc" id="d11">
                           <div class="select"> 
-                               <select class="doctyp">
-                                  <option value="COMM">COMM</option>
-                                  <option value="ART">ART</option>
+                               <select class="doctyp" >
+                                  <option value="COMM">Communication dans un congrès</option>
+                                  <option value="ART">Article dans une revue</option>
                                   <option value="THESE">THESE</option>
-                                  <option value="HDR">HDR</option>
-                                  <option value="2019">LECTURE</option>
+                                  <option value="HDR">High dynamic range</option>
+                               
                                   <option value="LECTURE">POSTER</option>
-								  <option value="COUV">COUV</option>
-								  <option value="DOUV">DOUV</option>
-								  <option value="OTHER">OTHER</option>
+								  <option value="COUV">Chapitre d'ouvrage</option>
+								  <option value="DOUV">Direction d'ouvrage</option>
+								  <option value="OTHER">Ouvrage y compris la traduction</option>
                                </select>
                            	</div>
 							</div>
@@ -230,9 +183,10 @@
     <script src="js/hal_js/scripthal.js"></script>
 	<script >
         $(document).ready(function(){
+		
           $("select.annee").change(function(){
             var annee = $(this).children("option:selected").val();
-            //alert("Vous avez sélectionné le langage : " + annee);
+            //alert("Vous avez sélectionné l'anne : " + annee);
 			//$(#tab).load();
              
 			
@@ -242,7 +196,7 @@
 		  
 		  $("select.doctyp").change(function(){
             var annee = $(this).children("option:selected").val();
-            //alert("Vous avez sélectionné le langage : " + annee);
+            //alert("Vous avez sélectionné l'annee : " + annee);
 			//$(#tab).load();
              
 			

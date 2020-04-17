@@ -3,7 +3,7 @@ var callbackSucess=function(data){
  // alert("labels:"+data);
   //var element = document.getElementById(zone_affiche); 
   //element.innerHTML="labels:"+
-
+clearInner(document.getElementById("zone_affiche"));
   var ref = '';
   $.each(data.response.docs, function(key, value){
     ref += '<tr>';
@@ -59,5 +59,12 @@ function clearInner(node) {
     while (node.hasChildNodes()) {
         clear(node.firstChild);
     }
+}
+
+function clear(node) {
+    while (node.hasChildNodes()) {
+        clear(node.firstChild);
+    }
+    node.parentNode.removeChild(node);
 }
 
