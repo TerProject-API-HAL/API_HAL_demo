@@ -35,7 +35,7 @@ if(opt===1)
  //var url = "https://api.archives-ouvertes.fr/search/DAVID/?q=*&fq=producedDateY_i:" + annee + "&rows=1000&indent=true&facet=true&facet.field=docType_s";
  var url = "https://api.archives-ouvertes.fr/search/DAVID/?q=*:*&wt=json&fl=title_s,producedDateD_i,producedDateM_i,docType_s,producedDateY_i,docid,uri_s,authFullName_s&fq=producedDateY_i:" + annee + "&rows=1000&indent=true&facet=true&facet.field=docType_s";
 }
-else if(opt===2)
+else if(opt===0)
 {
 	var url = "https://api.archives-ouvertes.fr/search/DAVID/?q=*:*&wt=json&fl=title_s,docid,uri_s,docType_s,authFullName_s,producedDateY_i&fq=docType_s:" + annee + "&rows=1000&indent=true&facet=true&facet.field=docType_s";
 	
