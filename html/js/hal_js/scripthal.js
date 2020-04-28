@@ -1,9 +1,13 @@
 var callbackSucess=function(data){
   console.log("donnee Api",data);
+  console.log("nombre d'article:",data.response.numFound);
  // alert("labels:"+data);
   //var element = document.getElementById(zone_affiche); 
   //element.innerHTML="labels:"+
 clearInner(document.getElementById("zone_affiche"));
+clearInner(document.getElementById("nb_art"));
+  var nb_art='';
+  nb_art+="Nombre de publication: "+data.response.numFound+"";
   var ref = '';
   $.each(data.response.docs, function(key, value){
     ref += '<tr>';
@@ -21,7 +25,7 @@ clearInner(document.getElementById("zone_affiche"));
     ref += '</tr>';
   });
    //$(#tab).load(#tab);
-  
+  $('#nb_art').append(nb_art);
   $('#zone_affiche').append(ref);
   $('#entete').text('resultat de la requete');
 }
