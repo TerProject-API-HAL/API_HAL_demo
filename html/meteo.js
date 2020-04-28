@@ -311,6 +311,7 @@ const ADAM = [
     }
 ];
 const type = ["Communication dans un congrès", "Article dans une revue", "Thèse", "High Dynamic Range", "LECTURE", "POSTER", "Chapitre d'ouvrage", "Direction d'ouvrage, Proceedings, Dossier", "Autre publication", "TOTAUX"];
+const items = ["COMM", "ART", "THESE", "HDR", "LECTURE", "POSTER", "COUV", "DOUV", "OTHER"]; 
 var result = [];
 var tab;
 var totalPub = 0;
@@ -465,6 +466,31 @@ function fillTab() {
     });
     $('#dataTable').dataTable();
 }
+
+function getCellsData(){
+    Annee = [0,2016, 2017, 2018, 2019, 2020];
+    $('#dataTable').DataTable({
+        destroy : true,
+        'createdRow': function( row, data, dataIndex ) {
+              $(row).attr('id', dataIndex);
+        },
+        "columnDefs": [ {
+        "targets":  "_all",
+        "createdCell": function (td, cellData, rowData, row, col) { 
+            if ( cellData > 0 ) {
+            $(td).attr('id', col);
+            if (td.id < 6) {
+                urlLink = "https://api.archives-ouvertes.fr/search/DAVID/?q=*&fq=producedDateY_i:" + Annee[td.id] + "&fq=docType_s:" + items[row] + "&rows=1000&indent=true";
+            }else
+                urlLink = "https://api.archives-ouvertes.fr/search/DAVID/?q=*&fq=docType_s:" + items[row] + "&rows=1000&indent=true";
+            $(td).html("<a href=publication.html?url="+urlLink+">"+cellData+"</a>");
+            $(td).css('color', 'blue')
+            }
+        }
+      } ]
+    });
+}
+
 
 function fillLineChart(data) {
     var ctx = document.getElementById("myAreaChart");
@@ -666,6 +692,7 @@ function getDavid(){
         fill();
         fillTab(tab);
         fillLineChart(tab);
+        getCellsData();
     })
 }
 
