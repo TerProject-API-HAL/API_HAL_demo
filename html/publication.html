@@ -103,13 +103,19 @@
                                   <option value="THESE">THESE</option>
                                   <option value="HDR">High dynamic range</option>
                                   <option value="LECTURE">Lecture</option>
-                                  <option value="POSTER">Poster</option>
+								  <option value="POSTER">Poster</option>
 								  <option value="COUV">Chapitre d'ouvrage</option>
 								  <option value="DOUV">Direction d'ouvrage</option>
 								  <option value="OTHER">Ouvrage y compris la traduction</option>
                                </select>
                            	</div>
 							</div>
+							
+							
+							
+						
+							
+							
 							
 							
 							<div class="bloc" id="d12">
@@ -125,7 +131,15 @@
                            	</div>
 							</div>
 							
-							
+								
+						 <div class="bloc" id="d13" style ="margin-left:400px">
+                          <div class="select"> 
+                               <select class="pub_nationale">
+                                  <option value="fr">Publication Nationale</option>
+                                  <option value="autre">Publication internationale</option>    
+                               </select>
+                           	</div>
+							</div>
 							</div>
                 <!-- /row -->
                 <div class="row">
@@ -142,6 +156,7 @@
 											<th>Lien</th>
                                             <th>Annee</th>
 											<th>Type</th>
+											<th>Pays</th>
                                             
                                         </tr>
                                     </thead>
@@ -201,6 +216,17 @@
              
 			
 			buttonClikGET(typePub,0);
+			//$(#tab).load( #tab);
+          });
+		  
+		  
+		  $("select.pub_nationale").change(function(){
+            var pub_nationale = $(this).children("option:selected").val();
+            //alert("Vous avez sélectionné l'annee : " + annee);
+			//$(#tab).load();
+             
+			
+			buttonClikGET(pub_nationale,2);
 			//$(#tab).load( #tab);
           });
 		  
