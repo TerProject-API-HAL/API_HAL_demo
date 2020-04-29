@@ -1,6 +1,23 @@
 var callbackSucess=function(data){
   console.log("donnee Api",data);
   console.log("nombre d'article:",data.response.numFound);
+  let params = new URLSearchParams(document.location.search.substring(1));
+  var type = params.get("docType_s");
+  var annee = parseInt(params.get("annee")); 
+  console.log(type);
+  console.log(annee)
+if (type && annee) {
+      urlHal = "https://api.archives-ouvertes.fr/search/DAVID/?q=*&fq=producedDateY_i:" + annee + "&fq=docType_s:" + type + "&fl=title_s,docid,uri_s,docType_s,authFullName_s,country_s,producedDateY_i&rows=1000&indent=true";            
+}
+else if (type && !annee) {
+      urlHal = "https://api.archives-ouvertes.fr/search/DAVID/?q=*&fq=docType_s:" + type + "&fl=title_s,docid,uri_s,docType_s,authFullName_s,country_s,producedDateY_i&rows=1000&indent=true";              
+}
+else if (!type && annee) {
+      urlHal = "https://api.archives-ouvertes.fr/search/DAVID/?q=*&fq=producedDateY_i:" + annee + "&fl=title_s,docid,uri_s,docType_s,authFullName_s,country_s,producedDateY_i&rows=1000&indent=true";            
+}else
+        urlHal = "https://api.archives-ouvertes.fr/search/DAVID/?q=*&fl=title_s,docid,uri_s,docType_s,authFullName_s,country_s,producedDateY_i&rows=1000&indent=true";            
+
+console.log(urlHal);
  // alert("labels:"+data);
   //var element = document.getElementById(zone_affiche); 
   //element.innerHTML="labels:"+

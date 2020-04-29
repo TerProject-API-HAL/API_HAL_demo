@@ -478,12 +478,19 @@ function getCellsData(){
         "targets":  "_all",
         "createdCell": function (td, cellData, rowData, row, col) { 
             if ( cellData > 0 ) {
+                console.log(row);
             $(td).attr('id', col);
-            if (td.id < 6) {
-                urlLink = "https://api.archives-ouvertes.fr/search/DAVID/?q=*&fq=producedDateY_i:" + Annee[td.id] + "&fq=docType_s:" + items[row] + "&rows=1000&indent=true";
-            }else
-                urlLink = "https://api.archives-ouvertes.fr/search/DAVID/?q=*&fq=docType_s:" + items[row] + "&rows=1000&indent=true";
-            $(td).html("<a href=publication.html?url="+urlLink+">"+cellData+"</a>");
+            if (td.id < 6 && row < 9) {
+                urlLink = 'publication.html?docType_s=' + items[row] + '&annee=' + Annee[td.id];            
+            }else if (td.id >= 6 && row < 9) {
+                urlLink = 'publication.html?docType_s=' + items[row];
+            }
+            else if (td.id < 6 && row >= 9) {
+                urlLink = 'publication.html?annee=' + Annee[td.id];
+            }
+            else
+                urlLink = 'publication.html?';
+            $(td).html("<a href="+urlLink+">"+cellData+"</a>");
             $(td).css('color', 'blue')
             }
         }
