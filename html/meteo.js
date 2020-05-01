@@ -355,8 +355,8 @@ function getparannee(annee, equipe, resolve, reject) {
 
 function compact(){
     var r = [];
-    for (var i = 0; i < 5; i++){
-        r[i] = result[i + 2016];
+    for (var i = 0; i < 6; i++){
+        r[i] = result[i + 2015];
     }
     return r;
 }
@@ -381,69 +381,69 @@ function fill() {
                 tab[0][j] += res[key + 1];
                 totauxCOMM += tab[0][j];
                 totauxParAnnee += tab[0][j];
-                tab[0][5] = totauxCOMM;
+                tab[0][6] = totauxCOMM;
             }
             if (item == "ART") {
                 tab[1][j] += res[key + 1];
                 totauxART += tab[1][j];
                 totauxParAnnee += tab[1][j];
-                tab[1][5] = totauxART;
+                tab[1][6] = totauxART;
             }
             if (item == "THESE") {
                 tab[2][j] += res[key + 1];
                 totauxTHESE += tab[2][j];
                 totauxParAnnee += tab[2][j];
-                tab[2][5] = totauxTHESE;
+                tab[2][6] = totauxTHESE;
             }
             if (item == "HDR") {
                 tab[3][j] += res[key + 1];
                 totauxHDR += tab[3][j];
                 totauxParAnnee += tab[3][j];
-                tab[3][5] = totauxHDR;
+                tab[3][6] = totauxHDR;
             }
             if (item == "LECTURE") {
                 tab[4][j] += res[key + 1];
                 totauxLECTURE += tab[4][j];
                 totauxParAnnee += tab[4][j];
-                tab[4][5] = totauxLECTURE;
+                tab[4][6] = totauxLECTURE;
             }
             if (item == "POSTER") {
                 tab[5][j] += res[key + 1];
                 totauxPOSTER += tab[5][j];
                 totauxParAnnee += tab[5][j];
-                tab[5][5] = totauxPOSTER;
+                tab[5][6] = totauxPOSTER;
             }
             if (item == "COUV") {
                 tab[6][j] += res[key + 1];
                 totauxCOUV += tab[6][j];
                 totauxParAnnee += tab[6][j];
-                tab[6][5] = totauxCOUV;
+                tab[6][6] = totauxCOUV;
             }
             if (item == "DOUV") {
                 tab[7][j] += res[key + 1];
                 totauxDOUV += tab[7][j];
                 totauxParAnnee += tab[7][j];
-                tab[7][5] += tab[7][j];
+                tab[7][6] += tab[7][j];
             }
             if (item == "OTHER") {
                 tab[8][j] += res[key + 1];
                 totauxOTHER += tab[8][j];
                 console.log(totauxOTHER);
                 totauxParAnnee += tab[8][j];
-                tab[8][5] += tab[8][j];
+                tab[8][6] += tab[8][j];
             }
             tab[9][j] = totauxParAnnee;
             
 
         });
          
-        tab[9][5] += tab[9][j];
+        tab[9][6] += tab[9][j];
 
 
     }
-    totalPub = tab[9][5];
+    totalPub = tab[9][6];
         
-        console.log(totalPub);
+        console.log("totalPub",totalPub);
         return totalPub;
 }
 
@@ -459,7 +459,8 @@ function fillTab() {
                 item[2],
                 item[3],
                 item[4],
-                item[5]
+                item[5],
+                item[6]
             ]
         );
         i++;
@@ -468,7 +469,7 @@ function fillTab() {
 }
 
 function getCellsData(){
-    Annee = [0,2016, 2017, 2018, 2019, 2020];
+    Annee = [0,2015, 2016, 2017, 2018, 2019, 2020];
     $('#dataTable').DataTable({
         destroy : true,
         'createdRow': function( row, data, dataIndex ) {
@@ -479,13 +480,14 @@ function getCellsData(){
         "createdCell": function (td, cellData, rowData, row, col) { 
             if ( cellData > 0 ) {
                 console.log(row);
+                console.log(td.id);
             $(td).attr('id', col);
-            if (td.id < 6 && row < 9) {
+            if (td.id < 7 && row < 9) {
                 urlLink = 'publication.html?docType_s=' + items[row] + '&annee=' + Annee[td.id];            
-            }else if (td.id >= 6 && row < 9) {
+            }else if (td.id >= 7 && row < 9) {
                 urlLink = 'publication.html?docType_s=' + items[row];
             }
-            else if (td.id < 6 && row >= 9) {
+            else if (td.id < 7 && row >= 9) {
                 urlLink = 'publication.html?annee=' + Annee[td.id];
             }
             else
@@ -504,7 +506,7 @@ function fillLineChart(data) {
     var myLineChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ["2016", "2017", "2018", "2019", "2020"],
+            labels: ["2015","2016", "2017", "2018", "2019", "2020"],
             datasets: [
                 {
                     label: type[0],
@@ -637,7 +639,7 @@ function fillLineChart(data) {
 
 function fillPublication() {
     clearInner(document.getElementById("result"));
-    for (var i = 2016; i <= 2020; i++){
+    for (var i = 2015; i <= 2020; i++){
         content = "<h3>" + i + "</h3><hr>";
         $("#result").append(content);
         $.each(result[i].response.docs, function (key, value) {
@@ -654,19 +656,24 @@ function fillPublication() {
 
 function getDavid(){
     tab = [
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0]
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0]
     ];
     result = [];
     Promise.all([
+        getparannee(2015, false, function (data) {
+            console.log(data);
+        }, function (e) {
+            console.error(e)
+        }),
         getparannee(2016, false, function (data) {
             console.log(data);
         }, function (e) {
@@ -700,152 +707,5 @@ function getDavid(){
         fillTab(tab);
         fillLineChart(tab);
         getCellsData();
-    })
-}
-
-function getAdam() {
-    tab = [
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0]
-    ];
-    result = [];
-    Promise.all([
-        getparannee(2016, ADAM, function (data) {
-           console.log(data);
-        }, function (e) {
-           console.error(e)
-        }),
-        getparannee(2017, ADAM, function (data) {
-            console.log(data);
-        }, function (e) {
-            console.error(e)
-        }),
-        getparannee(2018, ADAM, function (data) {
-            console.log(data);
-        }, function (e) {
-            console.error(e)
-        }),
-        getparannee(2019, ADAM, function (data) {
-            console.log(data);
-        }, function (e) {
-            console.error(e)
-        }),
-        getparannee(2020, ADAM, function (data) {
-            console.log(data);
-        }, function (e) {
-            console.error(e)
-        })
-    ]).then(function () {
-        //fillPublication();
-        result = compact();
-        fill();
-        fillTab(tab);
-        fillLineChart(tab);
-    })
-}
-
-function getAlmost() {
-    tab = [
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0]
-    ];
-    result = [];
-    Promise.all([
-        getparannee(2016, Almost, function (data) {
-            console.log(data);
-        }, function (e) {
-            console.error(e)
-        }),
-        getparannee(2017, Almost, function (data) {
-            console.log(data);
-        }, function (e) {
-            console.error(e)
-        }),
-        getparannee(2018, Almost, function (data) {
-            console.log(data);
-        }, function (e) {
-            console.error(e)
-        }),
-        getparannee(2019, Almost, function (data) {
-            console.log(data);
-        }, function (e) {
-            console.error(e)
-        }),
-        getparannee(2020, Almost, function (data) {
-            console.log(data);
-        }, function (e) {
-            console.error(e)
-        })
-    ]).then(function () {
-        //fillPublication();
-        result = compact();
-        fill();
-        fillTab(tab);
-        fillLineChart(tab);
-    })
-}
-
-function getPetrus() {
-    tab = [
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0]
-    ];
-    result = [];
-    Promise.all([
-        getparannee(2016, PETRUS, function (data) {
-            console.log(data);
-        }, function (e) {
-            console.error(e)
-        }),
-        getparannee(2017, PETRUS, function (data) {
-            console.log(data);
-        }, function (e) {
-            console.error(e)
-        }),
-        getparannee(2018, PETRUS, function (data) {
-            console.log(data);
-        }, function (e) {
-            console.error(e)
-        }),
-        getparannee(2019, PETRUS, function (data) {
-            console.log(data);
-        }, function (e) {
-            console.error(e)
-        }),
-        getparannee(2020, PETRUS, function (data) {
-            console.log(data);
-        }, function (e) {
-            console.error(e)
-        })
-    ]).then(function () {
-        //fillPublication();
-        result = compact();
-        fill();
-        fillTab(tab);
-        fillLineChart(tab);
     })
 }

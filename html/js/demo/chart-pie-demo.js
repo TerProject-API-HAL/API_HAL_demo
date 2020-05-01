@@ -1,7 +1,7 @@
 // Set new default font family and font color to mimic Bootstrap's default styling
 Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
 Chart.defaults.global.defaultFontColor = '#858796';
-const annee = ["2016", "2017", "2018", "2019", "2020"];
+const annee = ["2015","2016", "2017", "2018", "2019", "2020"];
 const colors = ["rgba(78, 115, 223, 1)", "rgba(0, 125, 44, 1)", "rgba(74, 125, 44, 1)",
     "rgba(74, 47, 0, 1)", "rgba(74, 0, 0, 1)", "rgba(255, 141, 170, 1)", "rgba(121, 18, 255, 1)",
     "rgba(121, 18, 95, 1)", "rgba(205, 235, 0, 1)"]
@@ -48,7 +48,7 @@ $.ajax({
     }
 });
 
-url = "https://api.archives-ouvertes.fr/search/DAVID/?q=*&fq=producedDateY_i:[2016 TO 2020]&rows=0&indent=true&facet=true&facet.field=producedDateY_i";
+url = "https://api.archives-ouvertes.fr/search/DAVID/?q=*&fq=producedDateY_i:[2015 TO 2020]&rows=0&indent=true&facet=true&facet.field=producedDateY_i";
 
 $.ajax({
     type: 'GET',
@@ -62,8 +62,15 @@ $.ajax({
         var an;
         var nbr = 0;
         $.each(res, function (key, item) {
-            if (item == "2016") {
+            if (item == "2015") {
                 data[0] = res[key + 1];
+                if (res[key + 1] > nbr){
+                    nbr = res[key + 1];
+                    an = item;
+                }
+            }
+            if (item == "2016") {
+                data[1] = res[key + 1];
                 if (res[key + 1] > nbr){
                     nbr = res[key + 1];
                     an = item;
