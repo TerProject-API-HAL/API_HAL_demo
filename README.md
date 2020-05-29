@@ -147,9 +147,7 @@ Cette application contient trois pages: <br>
 
 ### Conception du projet
 
-
-
-
+Pour la conception du projet nous avons utilisé la méthodologie de gestion de projet scrum couplé au méthode de dévellopement de processus 2TUP. Nous avons d'abord commencés par faire une étude des besoins de l'application et ensuite on a divisé le projet en des taches auquelles nous nous sommes reparties. chaque tache etait d'abord planifié avant d'etre exécute cela nous permettait de d'excuter les differentes taches dans les meilleurs délais.
 
 
 
