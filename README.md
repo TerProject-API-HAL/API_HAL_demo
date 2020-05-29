@@ -14,37 +14,21 @@ Les fonctionnalités de HAL sont rendues disponibles par des services web (https
 * Analyser les besoins du laboratoire
 * Définir et réaliser les tableaux de bord et les interfaces web
 
-## Les fonctionnalités de l'application
-
-✔ Recherche des articles en fonction de l’année<br>
-  * Option de sélection des années sous forme de liste déroulante.<br>
-  * Récupération du choix de l’utilisateur et renvoie du résultat sous forme de tableau (Titre de document, Description, date    de  publication et liens)<br>
-  * Renvoie du nombre total de publication de l’année choisi.<br>
-    
-✔ Recherche en fonction Type de publication (ça peut être revue scientifique, un rapport de thèse, un journal, un livre etc.)<br>
-  * Option de sélection des types de publication sous forme de liste déroulante.<br>
-  * Récupération du choix de l’utilisateur et renvoie des résultats sous forme de Tableau (Les documents publiés par le type choisi :       Titre, Description, date de publication et lien).<br>
-  * Renvoie du nombre de publications par rapport au type choisi.<br>
-
-✔ Visualiser l’état des publications avec l’évolution par rapport aux autres années : <br>
-  * Total des publications produits par années.<br>
-  * Total des publications produits par type de publication.<br>
-
 
 ## Manuel utilisateur
 
-###### Fonctionnalités de l'application
+### Fonctionnalités de l'application
 Cette application présente plusieurs fonctionnalités à savoir:
-✔ Afficher le nombre de publications en fonction du type de publication et de l'année
-✔ Afficher la liste des publications en fonction du type de publication et de l'année
-✔ Afficher le graphisme présentatnt le nombre de  publications par type et par année
-✔ Rechercher les publications par type de publication
-✔ Rechercher les publications d'audiences nationales ou internationales
-✔ Rechercher les publications par année
-✔ Afficher la liste des erreurs de publication
+* Afficher le nombre de publications en fonction du type de publication et de l'année
+* Afficher la liste des publications en fonction du type de publication et de l'année
+* Afficher le graphisme présentatnt le nombre de  publications par type et par année
+* Rechercher les publications par type de publication
+* Rechercher les publications d'audiences nationales ou internationales
+* Rechercher les publications par année
+* Afficher la liste des erreurs de publication
 
 
-###### Scenario d'usages de l'application
+### Scenario d'usages de l'application
 Cette application contient trois pages: <br>
 
 ✔ le dashbord: cette page permet,
@@ -74,8 +58,6 @@ Cette application contient trois pages: <br>
 
   
   ![Capture1](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture1.png)
-
-  
   ![Capture2](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture2.png)
   
   
@@ -147,8 +129,6 @@ Cette application contient trois pages: <br>
   ![Capture12](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture12.png)
    
   
-
-
 ## Manuel technique
  La conception de cette application a neccesité l'utilisation de plusieurs technologies:
  * Bootstrap: C'est un framework utilisant les langages HTML, CSS et JavaScript fournit aux développeurs des outils pour créer un site facilement. Ce framework nous a permis d'impléménter un design responsive pour notre application.
