@@ -42,7 +42,7 @@ Les fonctionnalités de HAL sont rendues disponibles par des services web (https
 
 
 ## Construction du projet
-A compléter
+Pour la construction du projet nous avons utiliser l'outils de gestion de dépendances qui en plus de la gestion des dépendances entre les modules, permet également de gerer le versionnement de notre application
 
 
 ## Perspectives pour amélioration de l'application
