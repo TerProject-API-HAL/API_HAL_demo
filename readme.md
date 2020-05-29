@@ -46,7 +46,7 @@ A compléter
 
 
 ## Perspectives pour amélioration de l'application
-A compléter
+Pour la construction du projet nous avons utiliser NPM qui permet de gerer les versionnements de notre application et aussi de gerer les dépendances entre modules.
 
 
 
