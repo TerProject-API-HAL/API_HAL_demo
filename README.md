@@ -19,9 +19,9 @@ Les fonctionnalités de HAL sont rendues disponibles par des services web (https
 
 ### Fonctionnalités de l'application
 Cette application présente plusieurs fonctionnalités à savoir:
-* Afficher le nombre de publications en fonction du type de publication et de l'année
+* Afficher le nombre de publication en fonction du type de publication et de l'année
 * Afficher la liste des publications en fonction du type de publication et de l'année
-* Afficher le graphisme présentatnt le nombre de  publications par type et par année
+* Afficher le graphisme présentatnt le nombre de  publication par type et par année
 * Rechercher les publications par type de publication
 * Rechercher les publications d'audiences nationales ou internationales
 * Rechercher les publications par année
@@ -32,9 +32,9 @@ Cette application présente plusieurs fonctionnalités à savoir:
 Cette application contient trois pages: <br>
 
 ✔ le dashbord: cette page permet,
-* d'afficher le nombre de publications en fonction du type de publication et de l'année
+* d'afficher le nombre de publication en fonction du type de publication et de l'année
 * d'afficher la liste des publications en fonction du type de publication et de l'année
-* d'afficher le graphisme présentatnt le nombre de  publications par type et par année
+* d'afficher le graphisme présentatnt le nombre de  publication par type et par année
 <br>
 
  ✔ Publication search: cette page permet,
@@ -80,7 +80,7 @@ Cette application contient trois pages: <br>
  
   
   
-   *  Cette page affiche par defaut la liste de toutes les publications éffectuées par les chercheurs du laboratoire DAVID
+   *  Cette page affiche par defaut la liste de toutes les publications éffectuées par les chercheurs du laboratoire DAVID.
 
 
 
@@ -89,8 +89,8 @@ Cette application contient trois pages: <br>
   
   
   
-   * Cette page nous donne la possibilité de rechercher les publication en fonction du type de publication 
-   * Pour rechercher par exemple la liste des thèses, cliquez sur le ménu déroulant et cliquez sur thèse
+   * Cette page nous donne la possibilité de rechercher les publication en fonction du type de publication.
+   * Pour rechercher par exemple la liste des thèses, cliquez sur le ménu déroulant et cliquez sur thèse.
 
 
 
@@ -103,8 +103,8 @@ Cette application contient trois pages: <br>
 
 
 
-   * Nous pouvons aussi rechercher la liste des publications d'audiences nationales et internationales
-   * Pour rechercher par exemple la liste des publications d'audiences internationales
+   * Nous pouvons aussi rechercher la liste des publications d'audiences nationales et internationales.
+   * Pour rechercher par exemple la liste des publications d'audiences internationales.
 
 
 
@@ -147,10 +147,11 @@ Cette application contient trois pages: <br>
 
 ### Conception du projet
 
-Pour la conception du projet nous avons utilisé la méthodologie de gestion de projet scrum couplé au méthode de dévellopement de processus 2TUP. Nous avons d'abord commencés par faire une étude des besoins de l'application et ensuite on a divisé le projet en des taches auquelles nous nous sommes reparties. chaque tache etait d'abord planifié avant d'etre exécute cela nous permettait de d'excuter les differentes taches dans les meilleurs délais.
-
-
-
+Pour la conception du projet nous avons utilisé la méthodologie de gestion de projet scrum couplé au méthode de développement de processus 2TUP.
+* Nous avions d'abord fait une étude de l'API HAL 
+* Ensuite, nous avions analysé les besoins du laboratoire DAVID
+* Puis, nous avions analysé les besoins de l'application
+* Enfin, nous avions divisé le projet en des tâches auquelles nous nous sommes reparties. Chaque tâche était d'abord planifié avant d'être exécuter cela nous permettait de d'excuter les differentes taches dans les meilleurs délais.
 
 
 ## Construction du projet
@@ -169,7 +170,7 @@ En perspective, cette application pourrait être amélioré en mettant en place 
 |-----------------------------|----------------------------------------|
 |          Gora DIEYE         |          misterelgo@gmail.com          |
 |      TAHOURA Koniba Jean    |          konibajean@gmail.com          |
-| Traoré Rosemonde Bénédicte  | rosemonde-benedicte.traore@ens.uvsq.fr |
+| Traoré Rosemonde Bénédicte  |    traore.rose.benedicte@gmail.com     |
 
 
 
