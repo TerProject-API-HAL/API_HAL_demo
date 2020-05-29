@@ -130,14 +130,34 @@ Cette application contient trois pages: <br>
    
   
 ## Manuel technique
- La conception de cette application a neccesité l'utilisation de plusieurs technologies:
- * Bootstrap: C'est un framework utilisant les langages HTML, CSS et JavaScript fournit aux développeurs des outils pour créer un site facilement. Ce framework nous a permis d'impléménter un design responsive pour notre application.
 
-* Javascript: Nous avions utilisé ce langage pour effectuer des requêtes dans l'API HAL
+### Solutions tcheniques
+ La conception de cette application a neccesité l'utilisation de plusieurs technologies:
+
+ ✔ Au niveau du front-end nous avions utilisé : <br>
+ * Bootstrap: C'est un framework utilisant les langages HTML, CSS et JavaScript fournit aux développeurs des outils pour créer un site facilement. Ce framework nous a permis d'impléménter un design responsive pour notre application.
+ * HTML: pour définir les différents éléments des pages de l'application
+ * CSS: pour la mise en forme les différents contenus définis par le HTML 
+ * JavaScript: pour rendre les pages de l'application dynamiques.
+ * Plug-ins DataTables de Jquery: pour gérer la pagination, le filtrage et la sélection des données du tableau des statistiques au niveau de la page dashboard 
+
+ ✔ Au niveau du back-end nous avions utilisé: <br>
+* JQuery: Nous avions utilisé ce langage pour effectuer des requêtes dans l'API HAL
+
+
+### Conception du projet
+
+
+
+
+
+
+
 
 
 ## Construction du projet
-Pour la construction du projet nous avons utiliser l'outils de gestion de dépendances qui en plus de la gestion des dépendances entre les modules, permet également de gerer le versionnement de notre application
+
+Pour la construction du projet nous avons utiliser l'outils de gestion de dépendances NPM qui en plus de la gestion des dépendances entre les modules, permet également de gerer le versionnement de notre application
 
 
 ## Perspectives pour amélioration de l'application
