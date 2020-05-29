@@ -46,7 +46,7 @@ Pour la construction du projet nous avons utiliser l'outils de gestion de dépen
 
 
 ## Perspectives pour amélioration de l'application
-Pour la construction du projet nous avons utiliser NPM qui permet de gerer les versionnements de notre application et aussi de gerer les dépendances entre modules.
+En perspective nous comptons faire un cache local qui permettra de dimunier le temps de réponse avec l'API Hal.
 
 
 
