@@ -1,32 +1,21 @@
-var callbackSucess=function(data){
-  console.log("donnee Api",data);
-  console.log("nombre d'article:",data.response.numFound);
-  /*let params = new URLSearchParams(document.location.search.substring(1));
-  var type = params.get("docType_s");
-  var annee = parseInt(params.get("annee")); /*
-  console.log(type);
-  console.log(annee)
-  //console.log("nombre d'article:",data.response.numFound);
-/*if (type && annee) {
-      urlHal = "https://api.archives-ouvertes.fr/search/DAVID/?q=*&fq=producedDateY_i:" + annee + "&fq=docType_s:" + type + "&fl=title_s,docid,uri_s,docType_s,authFullName_s,country_s,producedDateY_i&rows=1000&indent=true";            
-}
-else if (type && !annee) {
-      urlHal = "https://api.archives-ouvertes.fr/search/DAVID/?q=*&fq=docType_s:" + type + "&fl=title_s,docid,uri_s,docType_s,authFullName_s,country_s,producedDateY_i&rows=1000&indent=true";              
-}
-else if (!type && annee) {
-      urlHal = "https://api.archives-ouvertes.fr/search/DAVID/?q=*&fq=producedDateY_i:" + annee + "&fl=title_s,docid,uri_s,docType_s,authFullName_s,country_s,producedDateY_i&rows=1000&indent=true";            
-}else
-        urlHal = "https://api.archives-ouvertes.fr/search/DAVID/?q=*&fl=title_s,docid,uri_s,docType_s,authFullName_s,country_s,producedDateY_i&rows=1000&indent=true";            
+
+/* 
+   cette fonction est éxecutée lorsqu'on a reussit à recuperer les critères de recherche spécifier par l'utilisateur
 */
-//console.log(urlHal);
- // alert("labels:"+data);
-  //var element = document.getElementById(zone_affiche); 
-  //element.innerHTML="labels:"+
-clearInner(document.getElementById("zone_affiche"));
+
+var callbackSucess=function(data){
+  console.log("donnee Api",data);//on verifie avec un consol log que notre requete renvoie le resultat
+ console.log("nombre d'article:",data.response.numFound);// on affiche le nombre de resulta renvoyé
+clearInner(document.getElementById("zone_affiche"));//on efface les anciens resultats
 clearInner(document.getElementById("nb_art"));
   var nb_art='';
   nb_art+="Nombre de publication: "+data.response.numFound+"";
   var ref = '';
+  /*
+		   on parcourt à l'aide d'une boucle les resultats renvoyés par notre requete qu'on ajoute
+		   dans une table html pour etre afficher après
+		   
+		*/
   $.each(data.response.docs, function(key, value){
     ref += '<tr>';
 	  ref += '<td>'+value.docid+'</td>';
@@ -40,43 +29,76 @@ clearInner(document.getElementById("nb_art"));
     ref += '</tr>';
   });
    //$(#tab).load(#tab);
-  $('#nb_art').append(nb_art);
-  $('#zone_affiche').append(ref);
+  $('#nb_art').append(nb_art);//on ajoute le nombre de ligne renvoyé sur la page html
+  $('#zone_affiche').append(ref);//on ajoute le contenu de la requete dans le tableau html
   $('#entete').text('resultat de la requete');
 }
 
-function buttonClikGET(annee,opt){
-  //var url="http://api.archives-ouvertes.fr/search/?q=test&wt=json"
-  //var url = "https://api.archives-ouvertes.fr/search/DAVID"
-  
+/*
+		cette fonction "buttonClikGET" permet de rechercher des publications dans la collection 
+		David selon un critère donné. elle prend en entrée deux paramètre la première : "critere" permet de
+		préciser le critère de recherche. ce critère peut valoir une année ou un type de publication. exemple 
+		"critereRecherche" peut etre égale a 2015 ou egale type de publication THESE. le deuxième paramètre de cette
+		fonction appelé "opt" permet de savoir quel critère de recherche a été choisit par l'utilisateur. par 
+		exemple si l'utilisateur veut faire la recherche en fonction des année, ce paramètre va valoir 
+		annee et aisi de suite.
+
+*/
+
+
+function rechercheArt(critere,opt){
+ /*
+		   on commence par recuperer les paramètres de notre fonction depuis la page des statistiques
+		   si l'utilisateur souhaite faire la recherche depuis cette page
+		*/
   let params = new URLSearchParams(document.location.search.substring(1));
   var type = params.get("docType_s");
   var annee = parseInt(params.get("annee")); 
   var errors = params.get("errors");
   console.log(errors);
+  /*
+		   on teste pour voir si l'utilisateur veut faire sa recherche en fonction de l'année
+		   si c'est le cas on construit l'url avec l'année
+		*/
   
 if(opt===1)
 {
 
  //var url = "https://api.archives-ouvertes.fr/search/DAVID/?q=*&fq=producedDateY_i:" + annee + "&rows=1000&indent=true&facet=true&facet.field=docType_s";
- var url = "https://api.archives-ouvertes.fr/search/DAVID/?q=*:*&wt=json&fl=title_s,producedDateD_i,producedDateM_i,docType_s,producedDateY_i,docid,uri_s,country_s,authFullName_s&fq=producedDateY_i:" + annee + "&rows=1000&indent=true&facet=true&facet.field=docType_s";
+ var url = "https://api.archives-ouvertes.fr/search/DAVID/?q=*:*&wt=json&fl=title_s,producedDateD_i,producedDateM_i,docType_s,producedDateY_i,docid,uri_s,country_s,authFullName_s&fq=producedDateY_i:" + critere + "&rows=1000&indent=true&facet=true&facet.field=docType_s";
 }
+/*
+		   on teste pour voir si l'utilisateur veut faire sa recherche en fonction des types de publication
+		   si c'est le cas on construit l'url avec le type choisit
+		*/
 else if(opt===0)
 {
-	var url = "https://api.archives-ouvertes.fr/search/DAVID/?q=*:*&wt=json&fl=title_s,docid,uri_s,docType_s,authFullName_s,country_s,producedDateY_i&fq=docType_s:" + annee + "&rows=1000&indent=true&facet=true&facet.field=docType_s";
+	var url = "https://api.archives-ouvertes.fr/search/DAVID/?q=*:*&wt=json&fl=title_s,docid,uri_s,docType_s,authFullName_s,country_s,producedDateY_i&fq=docType_s:" + critere + "&rows=1000&indent=true&facet=true&facet.field=docType_s";
 	
 }
+
+/*
+		   on teste pour voir si l'utilisateur veut rechercher les publications nationales ou internationales
+		   si c'est le cas on construit l'url avec le pays d'origine France pour les publications nationales
+		   sinon on recherche les publications qui ont pour pays d'irigine différent de la France
+		*/
+
 else if(opt===2)
 {
    if(annee==="fr")
    {
-   	   var url = "https://api.archives-ouvertes.fr/search/DAVID/?q=*:*&wt=json&fl=title_s,docid,uri_s,docType_s,authFullName_s,country_s,producedDateY_i&fq=country_s:" + annee + "&rows=1000&indent=true&facet=true&facet.field=docType_s";
+   	   var url = "https://api.archives-ouvertes.fr/search/DAVID/?q=*:*&wt=json&fl=title_s,docid,uri_s,docType_s,authFullName_s,country_s,producedDateY_i&fq=country_s:" + critere + "&rows=1000&indent=true&facet=true&facet.field=docType_s";
    }
+   /*
+		   au cas ou l'utilisateur ne recherche pas les publications nationale on lui renvoie toutes les
+		   autres publications sauf celles qui ont un pays d'origine différent de la France
+		   */
    else
    {
    	  var url = "https://api.archives-ouvertes.fr/search/DAVID/?q=*:*&wt=json&fl=title_s,docid,uri_s,docType_s,authFullName_s,country_s,producedDateY_i&fq=!country_s:fr &rows=1000&indent=true&facet=true&facet.field=docType_s";
    }
 }
+// ici on renvoie toutes les publications qui se trouve dans la collection DAVID
 else if(opt===3)
 {
 	var url = "https://api.archives-ouvertes.fr/search/DAVID/?q=*:*&wt=json&fl=title_s,docid,uri_s,docType_s,authFullName_s,country_s,producedDateY_i&rows=1000&indent=true&facet=true&facet.field=docType_s";
@@ -99,7 +121,11 @@ else
 	//var url = "https://api.archives-ouvertes.fr/search/DAVID/?q=*:*&wt=json&fl=title_s,docid,uri_s,docType_s,authFullName_s,country_s,producedDateY_i&fq=docType_s:" + type + "&fq=producedDateY_i:" + annee + "&rows=1000&indent=true&facet=true&facet.field=docType_s";
     //var url="https://api.archives-ouvertes.fr/search/DAVID/?q=*&fq=producedDateY_i:" + annee + "&fq=docType_s:" + type + "&fl=title_s,docid,uri_s,docType_s,authFullName_s,country_s,producedDateY_i&rows=1000&indent=true"
  }	
-//location.reload(false); //permet de raffraichir la page
+		/*
+			après avoir recuperer le critère de recherche choisit par l'utilisateur on recupère les donné
+			renvoyé par l'api et on traite ces donnée avec une fonction appellée callbackSucess qu'on a 
+			déclaré plus haut
+		*/	
   var donnee=$.get(url,callbackSucess).done(function(){
 
   })
@@ -111,7 +137,15 @@ else
     });
 }
 
+/*
+ cette fonction permet de recuperer les éreurs c'est à dire les publications qui sont faites par des 
+ membres du laboratoire David et qui ne se trouve pas dans la collection David 
+*/
+
 function getErrors(){
+	/*
+	  ce tableau contient la liste de tous les membres du laboratoire David
+	*/
     DavidNames = [
     "Luc%20Bouganim",
     "Mokrane%20Bouzeghoub",
