@@ -109,7 +109,7 @@ else
       url = "https://api.archives-ouvertes.fr/search/DAVID/?q=*&fq=producedDateY_i:" + annee + "&fq=docType_s:" + type + "&fl=title_s,docid,uri_s,docType_s,authFullName_s,country_s,producedDateY_i&rows=1000&indent=true";            
                     }
     else if (errors) {
-      url = getErrors();              
+      url = getErrors();
       }
     else if (type && !annee) {
       url = "https://api.archives-ouvertes.fr/search/DAVID/?q=*&fq=producedDateY_i:[2015%20TO%20*]&fq=docType_s:" + type + "&fl=title_s,docid,uri_s,docType_s,authFullName_s,country_s,producedDateY_i&rows=1000&indent=true";              
@@ -137,15 +137,12 @@ else
     });
 }
 
-/*
- cette fonction permet de recuperer les éreurs c'est à dire les publications qui sont faites par des 
- membres du laboratoire David et qui ne se trouve pas dans la collection David 
-*/
-
+//Cette fonction permet de trouver les erreurs au niveau du labo David
+//Une erreur est une publication d'un auteur du laboratoire David 
+//qui n'est pas affilié a la Collectionn David
 function getErrors(){
-	/*
-	  ce tableau contient la liste de tous les membres du laboratoire David
-	*/
+    //Liste des noms complet des membres du labo David
+    //nb: %20 est l'expression régulière représentant l'espace dans une requête https
     DavidNames = [
     "Luc%20Bouganim",
     "Mokrane%20Bouzeghoub",
@@ -171,13 +168,12 @@ function getErrors(){
     "Laurent%20Yeh",
     "Karine%20Zeitouni"]
     //Defining a url for finding publications with author in DavidNames
-    var url_david_auth = "https://api.archives-ouvertes.fr/search/?q=-DAVID(" + "\"" + DavidNames[0] +"\"";
+    var url = "https://api.archives-ouvertes.fr/search/?q=(" + "\"" + DavidNames[0] +"\"";
             for (var i = 1; i < DavidNames.length; i++) {
-                url_david_auth += " OR " + "\"" + DavidNames[i] +"\"";
+                url += " OR " + "\"" + DavidNames[i] +"\"";
             }
-            url_david_auth += ")&fl=title_s,docid,uri_s,docType_s,authFullName_s,country_s,producedDateY_i&rows=1000&indent=true&facet=true&facet.field=docType_s";
-    console.log(url_david_auth);
-    return url_david_auth;
+            url += ")-DAVID&fq=producedDateY_i:[2015%20TO%20*]&fl=title_s,docid,uri_s,docType_s,authFullName_s,country_s,producedDateY_i&rows=1000&indent=true";
+    return url;
 }
 
 

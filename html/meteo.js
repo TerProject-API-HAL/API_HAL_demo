@@ -18,46 +18,6 @@ function clear(node) {
     node.parentNode.removeChild(node);
 }
 
-//Cette fonction permet de trouver les erreurs au niveau du labo David
-//Une erreur est une publication d'un auteur du laboratoire David 
-//qui n'est pas affilié a la Collectionn David
-function getErrors(){
-    //Liste des noms complet des membres du labo David
-    //nb: %20 est l'expression régulière représentant l'espace dans une requête https
-    DavidNames = [
-    "Luc%20Bouganim",
-    "Mokrane%20Bouzeghoub",
-    "Pierre%20Couchenay",
-    "Béatrice%20Finance",
-    "Jean-Michel%20Fourneau",
-    "Danièle%20Gardy",
-    "Zoubida%20Kedad",    
-    "Leïla%20Kloul",  
-    "Stéphane%20Lopes",   
-    "Yann%20Loyer",   
-    "Dana%20Marinca", 
-    "Laurent%20Marsan",   
-    "Thierry%20Mautor",   
-    "Nicoleta%20Preda",   
-    "Philippe%20Pucheral",    
-    "Franck%20Quessette",
-    "Popa%20Iulian%20Sandou",
-    "Guillaume%20Scerri", 
-    "Yann%20Strozecki",   
-    "Yehia%20Taher",  
-    "Sandrine%20Vial",    
-    "Laurent%20Yeh",
-    "Karine%20Zeitouni"]
-    //Defining a url for finding publications with author in DavidNames
-    var url_david_auth = "https://api.archives-ouvertes.fr/search/?q=(" + "\"" + DavidNames[0] +"\"";
-            for (var i = 1; i < DavidNames.length; i++) {
-                url_david_auth += " OR " + "\"" + DavidNames[i] +"\"";
-            }
-            url_david_auth += ")-DAVID&rows=1000&indent=true&facet=true&facet.field=docType_s";
-    console.log(url_david_auth);
-    return url_david_auth;
-}
-
 function getparannee(annee, equipe, resolve, reject) {
     return new Promise(function (resolve, reject) {
         if(equipe == false){
