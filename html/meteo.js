@@ -1,315 +1,4 @@
 //url = 'https://api.archives-ouvertes.fr/search/DAVID/?q=*:*&rows=1000&wt=json';
-const Almost = [
-    {
-        nom: "AIT%20%EL%20%MAHJOUB",
-        prenom: "YOUSSEF"
-    },
-    {
-        nom: "AUGER",
-        prenom: "David"
-    },
-    {
-        nom: "BABICHEVA",
-        prenom: "Tatiana"
-    },
-    {
-        nom: "BARTH",
-        prenom: "Dominique"
-    },
-    {
-        nom: "BEN%20%HASSINE",
-        prenom: "Nesrine"
-    },
-    {
-        nom: "BENNACEUR",
-        prenom: "Mokhtar%20%Walid"
-    },
-    {
-        nom: "BOUDARD",
-        prenom: "Mélanie"
-    },
-    {
-        nom: "BOUGUEROUA",
-        prenom: "Sana"
-    },
-    {
-        nom: "BOUHAMOUM",
-        prenom: "Redouane"
-    },
-    {
-        nom: "BABICHEVA",
-        prenom: "Tatiana"
-    },
-    {
-        nom: "CADERE",
-        prenom: "Christian"
-    },
-    {
-        nom: "CHEN",
-        prenom: "Wei"
-    },
-    {
-        nom: "CHOUTRI",
-        prenom: "Amira"
-    },
-    {
-        nom: "COUBAULT",
-        prenom: "Amelie"
-    },
-    {
-        nom: "COUCHENEY",
-        prenom: "Pierre"
-    },
-    {
-        nom: "EHOUNOU",
-        prenom: "Joseph"
-    },
-    {
-        nom: "FOURNEAU",
-        prenom: "Jean-Michel"
-    },
-    {
-        nom: "GARDY",
-        prenom: "Danièle"
-    },
-    {
-        nom: "GUIRAUD",
-        prenom: "Mael"
-    },
-    {
-        nom: "HIADSI",
-        prenom: "Mohamed"
-    },
-    {
-        nom: "HOCHE",
-        prenom: "Toussaint"
-    },
-    {
-        nom: "HOUISSA",
-        prenom: "ASMA"
-    },
-    {
-        nom: "ISSAD",
-        prenom: "Mélissa"
-    },
-    {
-        nom: "KLOUL",
-        prenom: "Leïla"
-    },
-    {
-        nom: "MARINCA",
-        prenom: "Dana"
-    },
-    {
-        nom: "MARSAN",
-        prenom: "Laurent"
-    },
-    {
-        nom: "MAUTOR",
-        prenom: "Thierry"
-    },
-    {
-        nom: "MENG",
-        prenom: "Huixing"
-    },
-    {
-        nom: "NOULEHO%20%ILEMO",
-        prenom: "STEFI"
-    },
-    {
-        nom: "PERRONIN",
-        prenom: "Laurence"
-    },
-    {
-        nom: "QUESSETTE",
-        prenom: "Franck"
-    },
-    {
-        nom: "RODIER",
-        prenom: "Lise"
-    },
-    {
-        nom: "SÉGARD",
-        prenom: "Sébastien"
-    },
-    {
-        nom: "STROZECKI",
-        prenom: "Yann"
-    },
-    {
-        nom: "VEKRIS",
-        prenom: "Dimitrios"
-    },
-    {
-        nom: "VIAL",
-        prenom: "Sandrine"
-    },
-    {
-        nom: "VOLAND",
-        prenom: "Mathieu"
-    },
-
-];
-const PETRUS = [
-    {
-        nom: "ANCIAUX",
-        prenom: "Nicolas"
-    },
-
-    {
-        nom: "BOUGANIM",
-        prenom: "Luc"
-    },
-    {
-        nom: "ERSOZ",
-        prenom: "Aydogan"
-    },
-    {
-        nom: "ERSOZ",
-        prenom: "Elif"
-    },
-    {
-        nom: "KATSOURAKI",
-        prenom: "Athanasia"
-    },
-    {
-        nom: "LADJEL",
-        prenom: "Riad"
-    },
-    {
-        nom: "CADERE",
-        prenom: "Saliha"
-    },
-    {
-        nom: "LOUDET",
-        prenom: "Julien"
-    },
-    {
-        nom: "MANEA",
-        prenom: "Oana"
-    },
-    {
-        nom: "PUCHERAL",
-        prenom: "Philippe"
-    },
-    {
-        nom: "SANDU%20%POPA",
-        prenom: "Iulian"
-    },
-    {
-        nom: "SCERRI",
-        prenom: "Guillaume"
-    },
-    {
-        nom: "SCHNEIDER",
-        prenom: "Laurent"
-    },
-    {
-        nom: "CADERE",
-        prenom: "Paul"
-    },
-    {
-        nom: "TSOLOVOS",
-        prenom: "Dimitrios"
-    }
-
-
-];
-const ADAM = [
-    {
-        nom: "ALSHAER",
-        prenom: "Mohammad"
-    },
-    {
-        nom: "BOUZEGHOUB",
-        prenom: "Mokrane"
-    },
-    {
-        nom: "Mokrane",
-        prenom: "Mariem"
-    },
-    {
-        nom: "BRICAGE",
-        prenom: "Marie"
-    },
-    {
-        nom: "FINANCE",
-        prenom: "Beatrice"
-    },
-    {
-        nom: "KANTARINIS",
-        prenom: "Alexandros"
-    },
-    {
-        nom: "KEDAD",
-        prenom: "Zoubida"
-    },
-    {
-        nom: "KELLOU",
-        prenom: "Kenza"
-    },
-    {
-        nom: "KOUTRAKI",
-        prenom: "Maria"
-    },
-    {
-        nom: "LOPES",
-        prenom: "Stephane"
-    },
-    {
-        nom: "LOYER",
-        prenom: "Yann"
-    },
-    {
-        nom: "MASRI",
-        prenom: "Ali"
-    },
-    {
-        nom: "MOUSHEIMISH",
-        prenom: "Raef"
-    },
-    {
-        nom: "MUSTAPHA",
-        prenom: "Ahmad"
-    },
-    {
-        nom: "OUKSILI",
-        prenom: "Hanane"
-    },
-    {
-        nom: "PREDA",
-        prenom: "Nicoleta"
-    },
-    {
-        nom: "RAMOLY",
-        prenom: "Nathan"
-    },
-    {
-        nom: "RIHANY",
-        prenom: "Mohamad"
-    },
-    {
-        nom: "TAHER",
-        prenom: "Yehia"
-
-    },
-    {
-        nom: "TONTHAT",
-        prenom: "DaiHai"
-    },
-    {
-        nom: "YEH",
-        prenom: "Laurent"
-    },
-    {
-        nom: "ZEITOUNI",
-        prenom: "ZEITOUNI"
-    },
-    {
-        nom: "ZEMRI",
-        prenom: "ZEMRI"
-    }
-];
 const type = ["Communication dans un congrès", "Article dans une revue", "Thèse", "High Dynamic Range", "LECTURE", "POSTER", "Chapitre d'ouvrage", "Direction d'ouvrage, Proceedings, Dossier", "Autre publication", "TOTAUX"];
 const items = ["COMM", "ART", "THESE", "HDR", "LECTURE", "POSTER", "COUV", "DOUV", "OTHER"]; 
 var result = [];
@@ -327,6 +16,46 @@ function clear(node) {
         clear(node.firstChild);
     }
     node.parentNode.removeChild(node);
+}
+
+//Cette fonction permet de trouver les erreurs au niveau du labo David
+//Une erreur est une publication d'un auteur du laboratoire David 
+//qui n'est pas affilié a la Collectionn David
+function getErrors(){
+    //Liste des noms complet des membres du labo David
+    //nb: %20 est l'expression régulière représentant l'espace dans une requête https
+    DavidNames = [
+    "Luc%20Bouganim",
+    "Mokrane%20Bouzeghoub",
+    "Pierre%20Couchenay",
+    "Béatrice%20Finance",
+    "Jean-Michel%20Fourneau",
+    "Danièle%20Gardy",
+    "Zoubida%20Kedad",    
+    "Leïla%20Kloul",  
+    "Stéphane%20Lopes",   
+    "Yann%20Loyer",   
+    "Dana%20Marinca", 
+    "Laurent%20Marsan",   
+    "Thierry%20Mautor",   
+    "Nicoleta%20Preda",   
+    "Philippe%20Pucheral",    
+    "Franck%20Quessette",
+    "Popa%20Iulian%20Sandou",
+    "Guillaume%20Scerri", 
+    "Yann%20Strozecki",   
+    "Yehia%20Taher",  
+    "Sandrine%20Vial",    
+    "Laurent%20Yeh",
+    "Karine%20Zeitouni"]
+    //Defining a url for finding publications with author in DavidNames
+    var url_david_auth = "https://api.archives-ouvertes.fr/search/?q=(" + "\"" + DavidNames[0] +"\"";
+            for (var i = 1; i < DavidNames.length; i++) {
+                url_david_auth += " OR " + "\"" + DavidNames[i] +"\"";
+            }
+            url_david_auth += ")-DAVID&rows=1000&indent=true&facet=true&facet.field=docType_s";
+    console.log(url_david_auth);
+    return url_david_auth;
 }
 
 function getparannee(annee, equipe, resolve, reject) {
@@ -361,6 +90,8 @@ function compact(){
     return r;
 }
 
+//Cette fonction permet de récupérer les données de l'api et de remplir le tableau 
+//En calculant les totaux en fonction du type et de l'année.
 function fill() {
     var totauxCOMM = 0;
     var totauxART = 0;
@@ -468,6 +199,10 @@ function fillTab() {
     $('#dataTable').dataTable();
 }
 
+//Cette fonction permet de transformer les données du tableau en lien
+// En cliquant sur une donnée on récupére les paramétres en les passent à la page
+//publication.html pour l'affichage des publications concernées
+//Ceci est effectué en utlisant l'option CreatedCell des datatables. 
 function getCellsData(){
     Annee = [0,2015, 2016, 2017, 2018, 2019, 2020];
     $('#dataTable').DataTable({
@@ -479,8 +214,6 @@ function getCellsData(){
         "targets":  "_all",
         "createdCell": function (td, cellData, rowData, row, col) { 
             if ( cellData > 0 ) {
-                console.log(row);
-                console.log(td.id);
             $(td).attr('id', col);
             if (td.id < 7 && row < 9) {
                 urlLink = 'publication.html?docType_s=' + items[row] + '&annee=' + Annee[td.id];            
@@ -500,7 +233,8 @@ function getCellsData(){
     });
 }
 
-
+//Représentation des données sous forme de graphes statistiques en utilisant
+//la bibliothèque JavaScript Chart.js
 function fillLineChart(data) {
     var ctx = document.getElementById("myAreaChart");
     var myLineChart = new Chart(ctx, {
@@ -700,12 +434,11 @@ function getDavid(){
             console.error(e)
         })
     ]).then(function () {
-        //console.log(result);
-        //fillPublication();
         result = compact();
         fill();
         fillTab(tab);
         fillLineChart(tab);
         getCellsData();
+        getErrors();
     })
 }
