@@ -85,7 +85,7 @@ else if(opt===0)
 
 else if(opt===2)
 {
-   if(annee==="fr")
+   if(critere==="fr")
    {
    	   var url = "https://api.archives-ouvertes.fr/search/DAVID/?q=*:*&wt=json&fl=title_s,docid,uri_s,docType_s,authFullName_s,country_s,producedDateY_i&fq=country_s:" + critere + "&rows=1000&indent=true&facet=true&facet.field=docType_s";
    }
