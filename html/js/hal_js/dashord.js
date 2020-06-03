@@ -399,6 +399,5 @@ function getDavid(){
         fillTab(tab);
         fillLineChart(tab);
         getCellsData();
-        getErrors();
     })
 }
