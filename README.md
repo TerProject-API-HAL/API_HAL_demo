@@ -144,23 +144,66 @@ Cette application contient trois menus verticales: <br>
  ✔ Au niveau du back-end nous avions utilisé: <br>
 * JQuery: Nous avions utilisé ce framework de JavaScript pour effectuer des requêtes dans l'API HAL
 
+✔ Utilisation de github pour héberger le code source de l'application
+
+✔ Utilisation de mysql pour la création de la base de données
+
 
 ### Conception du projet
 
+#### Méthodologie utilisé
 Pour la conception du projet nous avons utilisé la méthodologie de gestion de projet scrum couplé au méthode de développement de processus 2TUP.
-* Nous avions d'abord fait une étude de l'API HAL 
-* Ensuite, nous avions analysé les besoins du laboratoire DAVID
-* Puis, nous avions analysé les besoins de l'application
-* Enfin, nous avions divisé le projet en des tâches auquelles nous nous sommes reparties. Chaque tâche était d'abord planifié avant d'être exécuter cela nous permettait d'excuter les differentes tâches dans les meilleurs délais.
+Notre travail s'est déroulé en plusieurs phases:
+
+✔ Etude préléminaire qui a consisté à effectuer:
+* Une étude de l'API HAL 
+* Une analyse des besoins du laboratoire DAVID
+* Une définition choix techniques: matériels, logiciels, langages
+* Un recueil des besoins fonctionnels dans lequel nous avons recensé les traitements prévus dans l'application.
+
+✔ Capture des besoins fonctionnels qui a consisté à :
+* Définir les fonctionnalités de l'application
+* A définir les cas d'utilisation de l'application
+* A définir les packages de l'application
+
+✔ Ananlyse qui a consisté à:
+* A déterminer comment implémenter chaque fonctionnalité de l'application
+* A déterminer 
+
+✔ Conception detaillée qui a consisté
+* A confectionner d'abord l'interface graphique de l'application
+* A rediger le code source  des différentes pages de l'application
+* A rediger des scripts permettants d'interroger l'API Hal
+
+* Pour mener à bien notre projet, chaque semaine un certains nombre de tâche était définies et reparties aux différents membres du groupe.
+ Et cela nous a permis de mieux repartir le travail et d'excuter les differentes tâches dans les meilleurs délais.
+
+#### Modèle conceptuel, relationnel et physique 
+
+Pour pouvoir stocker les informations des anciennes publications dans une base de données afin d'optimiser le temps de reponse lorsqu'on veut
+acceder aux informations sur ces publications, nous avons réalisé ces différents modèles sur lesquels nous allons nous servir pour la création des
+tables dans la base de données
+
+Modèle conceptuel
+
+![Modèle Conceptuel](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/conceptuel.jpeg)
+
+Modèle relationnel
+
+![Modèle Relationnel](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/relationnel.jpeg)
+
+modèle physique
+
+![Modèle Physique](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/physique.jpeg)
 
 
 ## Construction du projet
 
 Pour la construction du projet nous avons utiliser l'outils de gestion de dépendances NPM qui en plus de la gestion des dépendances entre les modules, permet également de gerer le versionnement de notre application.
 Pour cela, nous avons crée un fichier package.json dans lequel nous avions définies les versions du projet ainsi que les dépendences utilisées.
-  
-    ```a
-    {
+
+``
+{
     "name": "projet_API_Hal",
     "version": "0.1.0",
   "homepage": "https://github.com/TerProject-API-HAL/API-HAL-demo-website",
@@ -170,9 +213,9 @@ Pour cela, nous avons crée un fichier package.json dans lequel nous avions déf
     "jquery": "~2.1.4",
     "Bootstrap": "4.5"
     }
-}
-  ```
-par exemple pour construire un projet avec npm, on procède comme suit:
+}``
+
+* par exemple pour construire un projet avec npm, on procède comme suit:
 Prérequis :
 Avoir NodeJs installé
 https://nodejs.org/
@@ -186,14 +229,13 @@ https://nodejs.org/
     5. Créez votre fichier js d'entrée dans le dossier, par exemple app.js
     6. Écrivez dedans : console.log("NodeJS start");
     7. Dans la console : tapez "node app.js", normalement "NodeJS start" doit s'afficher.
-
-
-## Perspectives pour amélioration de l'application
+  
+## Perspectives pour amélioration de l'application 
 
 En perspective, cette application pourrait être améliorée en mettant en place un cache local qui permettra de dimunier le temps de réponse avec l'API Hal.
-
-
-
+* Pour créer la base de donnée, on pourrait s'appuyer sur les modèles conceptuel, relationnel, physique et le script *bd_hal.sql* que nous avons rédiger pour la
+création de la base de donnée.
+* Pour effectuer des requêtes dans la base de données on pourrait utilisé node.js
 
 
 ## Auteurs
@@ -203,8 +245,4 @@ En perspective, cette application pourrait être améliorée en mettant en place
 |          Gora DIEYE         |          misterelgo@gmail.com          |
 |      TAHOURA Koniba Jean    |          konibajean@gmail.com          |
 | Traoré Rosemonde Bénédicte  |    traore.rose.benedicte@gmail.com     |
-
-
-
-
 
