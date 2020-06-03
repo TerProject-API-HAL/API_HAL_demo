@@ -213,19 +213,19 @@ Pour mener à bien notre projet, chaque semaine un certains nombre de tâche ét
 Pour la construction du projet nous avons utiliser l'outils de gestion de dépendances NPM qui en plus de la gestion des dépendances entre les modules, permet également de gerer le versionnement de notre application.
 Pour cela, nous avons crée un fichier package.json dans lequel nous avions définies les versions du projet ainsi que les dépendences utilisées.
 
-``
+``` json
 {
     "name": "projet_API_Hal",
-    "version": "0.1.0", ``<br>
- `` "homepage": "https://github.com/TerProject-API-HAL/API-HAL-demo-website",``<br>
- `` { "license" : "BSD-3-Clause" }, ``<br>
- ``   "dependencies": {
+    "version": "0.1.0",
+  "homepage": "https://github.com/TerProject-API-HAL/API-HAL-demo-website",
+  { "license" : "BSD-3-Clause" },
+    "dependencies": {
         "markdown": "~0.4",
     "jquery": "~2.1.4",
     "Bootstrap": "4.5"
     }
-}``
-
+}
+```
 * par exemple pour construire un projet avec npm, on procède comme suit:
 Prérequis :
 Avoir NodeJs installé
