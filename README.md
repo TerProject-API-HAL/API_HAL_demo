@@ -156,12 +156,30 @@ Pour la conception du projet nous avons utilisé la méthodologie de gestion de 
 
 ## Construction du projet
 
-Pour la construction du projet nous avons utiliser l'outils de gestion de dépendances NPM qui en plus de la gestion des dépendances entre les modules, permet également de gerer le versionnement de notre application
+Pour la construction du projet nous avons utiliser l'outils de gestion de dépendances NPM qui en plus de la gestion des dépendances entre les modules, permet également de gerer le versionnement de notre application.
+Pour cela, nous avons crée un fichier package.json dans lequel nous avions définies les versions du projet ainsi que les dépendences utilisées.
+  
+    ```a
+    {
+    "name": "projet_API_Hal",
+    "version": "0.1.0",
+  "homepage": "https://github.com/TerProject-API-HAL/API-HAL-demo-website",
+  { "license" : "BSD-3-Clause" },
+    "dependencies": {
+        "markdown": "~0.4",
+    "jquery": "~2.1.4",
+    "Bootstrap": "4.5"
+    }
+}
+  ```
 
 
 ## Perspectives pour amélioration de l'application
 
 En perspective, cette application pourrait être améliorée en mettant en place un cache local qui permettra de dimunier le temps de réponse avec l'API Hal.
+
+
+
 
 
 ## Auteurs
