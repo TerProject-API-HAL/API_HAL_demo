@@ -10,29 +10,29 @@ Les fonctionnalités de HAL sont rendues disponibles par des services web (https
 ## Les Objectifs de la mission
 <p>L'objectif du projet est de réaliser une application web s'appuyant sur les services web de HAL pour produire des tableaux de bord et de simplifier l'interrogation et l'ajout de références bibliographiques.</p>
  Les tâches à réaliser sont donc:<br>
-✔ Etudier l'API de HAL
-✔ Analyser les besoins du laboratoire
-✔ Définir et réaliser les tableaux de bord et les interfaces web
+✔ Etudier l'API de HAL<br>
+✔ Analyser les besoins du laboratoire<br>
+✔ Définir et réaliser les tableaux de bord et les interfaces web<br>
 
 
 ## Manuel utilisateur
 
 ### Fonctionnalités de l'application
-Cette application présente plusieurs fonctionnalités à savoir:
-✔ Afficher le nombre de publication en fonction du type de publication et de l'année
-✔ Afficher la liste des publications en fonction du type de publication et de l'année
-✔ Afficher le graphisme présentant le nombre de  publication par type et par année
-✔ Rechercher les publications par type de publication: cette fonctionnalité nous donne la possibilité de:
+Cette application présente plusieurs fonctionnalités à savoir:<br>
+✔ Afficher le nombre de publication en fonction du type de publication et de l'année<br>
+✔ Afficher la liste des publications en fonction du type de publication et de l'année<br>
+✔ Afficher le graphisme présentant le nombre de  publication par type et par année<br>
+✔ Rechercher les publications par type de publication: cette fonctionnalité nous donne la possibilité de:<br>
 * Rechercher des communications dans un congrès
 * Rechercher des articles dans une revue
 * Rechercher les publications de type High Dynamic Range
 * Rechercher les publications de type Lecture
 * Rechercher des chapitres d'ouvrages
 * Rechercher des directions d'ouvrages
-* Rechercher des ouvrages y compris leur traduction
-✔ Rechercher les publications d'audiences nationales ou internationales
+* Rechercher des ouvrages y compris leur traduction<br>
+✔ Rechercher les publications d'audiences nationales ou internationales<br>
 ✔ Rechercher les publications par année: cette fonctionnalité nous offre la possibilité de rechercher les publications de l'année 2015 à 2020
-✔ Afficher la liste des erreurs de publication
+✔ Afficher la liste des erreurs de publication<br>
 
 ### Scenario d'usages de l'application
 Cette application contient trois menus verticales: <br>
