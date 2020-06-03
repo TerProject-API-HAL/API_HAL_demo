@@ -49,7 +49,7 @@ Cette application contient trois menus verticales: <br>
 
 1. Accès à l'application
 
- *  Pour acceder à l'application, rendez-vous sur le lien  <https://terproject-api-hal.github.io/API-HAL-demo-website/html/index.html> <br>
+ *  Pour acceder à l'application, rendez-vous sur le lien  <https://terproject-api-hal.github.io/David-website/html/> <br>
  *  Ce lien permet d'acceder directement sur la page Dashbord <br>
  
 2. Dashbord
@@ -85,7 +85,7 @@ Cette application contient trois menus verticales: <br>
   
   
    * Nous avons aussi la possibilité de rechercher les publication en fonction du type de publication.
-   * Pour rechercher par exemple la liste des thèses, cliquez sur le ménu déroulant et cliquez sur thèse.
+   * Exemple de recherche de la liste des thèses:
 
   ![Capture7](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture7.png)
 
@@ -99,7 +99,7 @@ Cette application contient trois menus verticales: <br>
 
 
    * Nous pouvons également rechercher la liste des publications d'audiences nationales et internationales.
-   * Pour rechercher par exemple la liste des publications d'audiences internationales.
+   * Exemple de recherche de la liste des publications d'audiences internationales.
 
   ![Capture10](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture10.png)
 
@@ -108,7 +108,7 @@ Cette application contient trois menus verticales: <br>
   ![Capture11](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture11.png)
    
    * En plus, nous pouvons rechercher la liste des publications par année
-   * Pour rechercher par exemple la liste des publications de l'année 2019
+   * Exemple de recherche de la liste des publications de l'année 2019
 
   ![Capture12](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture12.png)
 
