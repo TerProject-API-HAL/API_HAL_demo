@@ -215,12 +215,12 @@ Pour cela, nous avons crée un fichier package.json dans lequel nous avions déf
 
 ``` json
 {
-    "name": "projet_API_Hal",
-    "version": "0.1.0",
+  "name": "projet_API_Hal",
+  "version": "0.1.0",
   "homepage": "https://github.com/TerProject-API-HAL/API-HAL-demo-website",
-  "license" : "BSD-3-Clause" },
-    "dependencies": {
-        "markdown": "~0.4",
+  "license" : "BSD-3-Clause",
+  "dependencies": {
+    "markdown": "~0.4",
     "jquery": "~2.1.4",
     "Bootstrap": "4.5"
     }
