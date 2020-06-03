@@ -54,54 +54,77 @@ Cette application contient trois menus verticales: <br>
  
 2. Dashbord
 
-  *  Le menu Dashbord nous donne la possibilité de visualiser le tableau  et le graphique. <br>  
+  *  Le menu Dashbord nous donne la possibilité de visualiser le tableau  et le graphique. <br> 
+
   ![Capture1](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture1.png)
   ![Capture2](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture2.png)
   
   
-  *  Nous pouvons aussi accéder à la liste des publications en double cliquant sur la colone qui affiche le nombre de publication <br>
-  *  Par exemple on peut double cliquer sur le nombre d'Article dans une revue publié en 2016 c'est à dire la colonne qui contient 7 <br>
+  *  Nous pouvons aussi accéder à la liste des publications en cliquant sur une donnée pour afficher les publications concernées<br>
+  *  Par exemple on peut cliquer sur le nombre d'Article dans une revue publié en 2016 c'est à dire la colonne qui contient 7 <br>
+
   ![Capture3](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture3.png)
  
-  * cela affiche les 7 articles de revues publiés en 2016 <br>
+  * Liste des 7 articles de revues publiés en 2016 <br>
+
   ![Capture4](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture4.png)
  
   
 3. Publication Search
 
-  *  Pour rechercher les publications en fonction du type, de l'année, il faut cliquer sur l'onglet Publication Search 
+  *  Pour rechercher les publications en fonction du type, de l'année, et rechercher les publications d'audiences nationales ou
+     internationales, il faut cliquer sur l'onglet Publication Search 
+
   ![Capture5](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture5.png)
 
   
    *  Lorsqu'on clique sur l'onglet Publication Search , nous avons accès à la liste de toutes les publications éffectuées par les chercheurs
     du laboratoire DAVID.
+
   ![Capture6](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture6.png)
   
   
    * Nous avons aussi la possibilité de rechercher les publication en fonction du type de publication.
    * Pour rechercher par exemple la liste des thèses, cliquez sur le ménu déroulant et cliquez sur thèse.
+
   ![Capture7](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture7.png)
+
+  * Puis cliquer sur thèse
+
   ![Capture8](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture8.png)
+
+  Liste des thèses
+
   ![Capture9](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture9.png)
 
 
    * Nous pouvons également rechercher la liste des publications d'audiences nationales et internationales.
    * Pour rechercher par exemple la liste des publications d'audiences internationales.
+
   ![Capture10](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture10.png)
+
+  Liste des publications d'audiences internationales
+
   ![Capture11](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture11.png)
    
    * En plus, nous pouvons rechercher la liste des publications par année
    * Pour rechercher par exemple la liste des publications de l'année 2019
+
   ![Capture12](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture12.png)
+
+  Liste des publications de l'année 2019
+
   ![Capture13](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture13.png)
 
 
  4. Publication Errors
 
  Pour afficher les erreurs de publication, il faut cliquer sur l'onglet Publication Errors
+
    ![Capture14](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture14.png)
 
    Au clic de cet onglet nous avons accès à la liste des erreurs de publication
+   
   ![Capture15](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture15.png)
    
   
