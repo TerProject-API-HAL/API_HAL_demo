@@ -172,6 +172,20 @@ Pour cela, nous avons crée un fichier package.json dans lequel nous avions déf
     }
 }
   ```
+par exemple pour construire un projet avec npm, on procède comme suit:
+Prérequis :
+Avoir NodeJs installé
+https://nodejs.org/
+
+    1. Créez le dossier du projet
+    2. Ouvrez une console dans ce dossier (utilisez la commande cd si besoin...)
+    3. Dans la console, tapez "npm init" et répondez aux questions. Le fichier package.json sera alors créé.
+    4. Pour installer les modules dont vous aurez besoin pour votre projet, utilisez la commande :
+    "npm install <pkg> --save"
+    (Le --save permet d'ajouter ce module dans le fichier package.json)
+    5. Créez votre fichier js d'entrée dans le dossier, par exemple app.js
+    6. Écrivez dedans : console.log("NodeJS start");
+    7. Dans la console : tapez "node app.js", normalement "NodeJS start" doit s'afficher.
 
 
 ## Perspectives pour amélioration de l'application
