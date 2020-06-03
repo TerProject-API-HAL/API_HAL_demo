@@ -10,23 +10,29 @@ Les fonctionnalités de HAL sont rendues disponibles par des services web (https
 ## Les Objectifs de la mission
 <p>L'objectif du projet est de réaliser une application web s'appuyant sur les services web de HAL pour produire des tableaux de bord et de simplifier l'interrogation et l'ajout de références bibliographiques.</p>
  Les tâches à réaliser sont donc:
-* Etudier l'API de HAL
-* Analyser les besoins du laboratoire
-* Définir et réaliser les tableaux de bord et les interfaces web
+✔ Etudier l'API de HAL
+✔ Analyser les besoins du laboratoire
+✔ Définir et réaliser les tableaux de bord et les interfaces web
 
 
 ## Manuel utilisateur
 
 ### Fonctionnalités de l'application
 Cette application présente plusieurs fonctionnalités à savoir:
-* Afficher le nombre de publication en fonction du type de publication et de l'année
-* Afficher la liste des publications en fonction du type de publication et de l'année
-* Afficher le graphisme présentant le nombre de  publication par type et par année
-* Rechercher les publications par type de publication
-* Rechercher les publications d'audiences nationales ou internationales
-* Rechercher les publications par année
-* Afficher la liste des erreurs de publication
-
+✔ Afficher le nombre de publication en fonction du type de publication et de l'année
+✔ Afficher la liste des publications en fonction du type de publication et de l'année
+✔ Afficher le graphisme présentant le nombre de  publication par type et par année
+✔ Rechercher les publications par type de publication: cette fonctionnalité nous donne la possibilité de:
+* Rechercher des communications dans un congrès
+* Rechercher des articles dans une revue
+* Rechercher les publications de type High Dynamic Range
+* Rechercher les publications de type Lecture
+* Rechercher des chapitres d'ouvrages
+* Rechercher des directions d'ouvrages
+* Rechercher des ouvrages y compris leur traduction
+✔ Rechercher les publications d'audiences nationales ou internationales
+✔ Rechercher les publications par année: cette fonctionnalité nous offre la possibilité de rechercher les publications de l'année 2015 à 2020
+✔ Afficher la liste des erreurs de publication
 
 ### Scenario d'usages de l'application
 Cette application contient trois menus verticales: <br>
@@ -130,7 +136,7 @@ Cette application contient trois menus verticales: <br>
   
 ## Manuel technique
 
-### Solutions tcheniques
+### Solutions tcheniques choisies
  La conception de cette application a neccesité l'utilisation de plusieurs technologies:
 
  ✔ Au niveau du front-end nous avions utilisé : <br>
@@ -151,37 +157,26 @@ Cette application contient trois menus verticales: <br>
 
 ### Conception du projet
 
-#### Méthodologie utilisé
-Pour la conception du projet nous avons utilisé la méthodologie de gestion de projet scrum couplé au méthode de développement de processus 2TUP.
+#### Méthodologie utilisée
+Pour la conception du projet nous avons utilisé la méthodologie de gestion de projet scrum couplé au processus de développement 2TUP (2 Track Unified Process).
 Notre travail s'est déroulé en plusieurs phases:
 
 ✔ Etude préléminaire qui a consisté à effectuer:
-* Une étude de l'API HAL 
-* Une analyse des besoins du laboratoire DAVID
-* Une définition choix techniques: matériels, logiciels, langages
-* Un recueil des besoins fonctionnels dans lequel nous avons recensé les traitements prévus dans l'application.
+* Une étude de l'API HAL à travers la documentation (https://api.archives-ouvertes.fr/docs)
 
 ✔ Capture des besoins fonctionnels qui a consisté à :
-* Définir les fonctionnalités de l'application
-* A définir les cas d'utilisation de l'application
-* A définir les packages de l'application
+* Définir les fonctionnalités de l'application (qui ont été présenté dans la partie *Fonctionnalités de l'application* ).
+* A définir les cas d'utilisation de l'application (qui ont été présenté avec des captures d'écran dans la partie *Scenario d'usages de l'application* ).
+
+✔ Capture des besoins techniques qui a consisté à :
+* Définir les choix techniques (qui ont été présenté avec des captures d'écran dans la partie *Solutions tcheniques choisies* ).
 
 ✔ Ananlyse qui a consisté à:
 * A déterminer comment implémenter chaque fonctionnalité de l'application
-* A déterminer 
+* A définir le modèle conceptuel, relationnel et physique: 
 
-✔ Conception detaillée qui a consisté
-* A confectionner d'abord l'interface graphique de l'application
-* A rediger le code source  des différentes pages de l'application
-* A rediger des scripts permettants d'interroger l'API Hal
-
-* Pour mener à bien notre projet, chaque semaine un certains nombre de tâche était définies et reparties aux différents membres du groupe.
- Et cela nous a permis de mieux repartir le travail et d'excuter les differentes tâches dans les meilleurs délais.
-
-#### Modèle conceptuel, relationnel et physique 
-
-Pour pouvoir stocker les informations des anciennes publications dans une base de données afin d'optimiser le temps de reponse lorsqu'on veut
-acceder aux informations sur ces publications, nous avons réalisé ces différents modèles sur lesquels nous allons nous servir pour la création des
+Pour pouvoir stocker les informations des publications dans une base de données afin d'optimiser le temps de reponse lorsqu'on veut
+acceder aux informations sur ces publications, nous avons réalisé ces différents modèles sur lesquels nous nous sommes servis pour la création des
 tables dans la base de données
 
 Modèle conceptuel
@@ -195,6 +190,19 @@ Modèle relationnel
 modèle physique
 
 ![Modèle Physique](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/physique.jpeg)
+
+✔ Conception detaillée qui a consisté
+* A déterminer le type de design souhaité pour l'interface graphique de l'application
+* A rediger les scripts de génération de la base
+
+✔  Codage qui a consisté 
+* A rediger le code source des différentes pages de l'application
+* A rediger des scripts permettants d'interroger l'API Hal
+
+✔ Tests qui a consisté à effectué des tests sur l'application afin de déterminer des bugs et les corriger
+
+Pour mener à bien notre projet, chaque semaine un certains nombre de tâche était définies et reparties aux différents membres du groupe.
+ Et cela nous a permis de mieux repartir le travail et d'excuter les differentes tâches dans les meilleurs délais.
 
 
 ## Construction du projet
@@ -224,8 +232,7 @@ https://nodejs.org/
     2. Ouvrez une console dans ce dossier (utilisez la commande cd si besoin...)
     3. Dans la console, tapez "npm init" et répondez aux questions. Le fichier package.json sera alors créé.
     4. Pour installer les modules dont vous aurez besoin pour votre projet, utilisez la commande :
-    "npm install <pkg> --save"
-    (Le --save permet d'ajouter ce module dans le fichier package.json)
+    "npm install <pkg> --save" (Le --save permet d'ajouter ce module dans le fichier package.json)
     5. Créez votre fichier js d'entrée dans le dossier, par exemple app.js
     6. Écrivez dedans : console.log("NodeJS start");
     7. Dans la console : tapez "node app.js", normalement "NodeJS start" doit s'afficher.
