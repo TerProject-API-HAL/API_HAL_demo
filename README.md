@@ -9,7 +9,7 @@ Les fonctionnalités de HAL sont rendues disponibles par des services web (https
 
 ## Les Objectifs de la mission
 <p>L'objectif du projet est de réaliser une application web s'appuyant sur les services web de HAL pour produire des tableaux de bord et de simplifier l'interrogation et l'ajout de références bibliographiques.</p>
- Les tâches à réaliser sont donc:
+ Les tâches à réaliser sont donc:<br>
 ✔ Etudier l'API de HAL
 ✔ Analyser les besoins du laboratoire
 ✔ Définir et réaliser les tableaux de bord et les interfaces web
@@ -161,17 +161,17 @@ Cette application contient trois menus verticales: <br>
 Pour la conception du projet nous avons utilisé la méthodologie de gestion de projet scrum couplé au processus de développement 2TUP (2 Track Unified Process).
 Notre travail s'est déroulé en plusieurs phases:
 
-✔ Etude préléminaire qui a consisté à effectuer:
+✔ Etude préléminaire qui a consisté à effectuer:<br>
 * Une étude de l'API HAL à travers la documentation (https://api.archives-ouvertes.fr/docs)
 
-✔ Capture des besoins fonctionnels qui a consisté à :
+✔ Capture des besoins fonctionnels qui a consisté à :<br>
 * Définir les fonctionnalités de l'application (qui ont été présenté dans la partie *Fonctionnalités de l'application* ).
 * A définir les cas d'utilisation de l'application (qui ont été présenté avec des captures d'écran dans la partie *Scenario d'usages de l'application* ).
 
-✔ Capture des besoins techniques qui a consisté à :
+✔ Capture des besoins techniques qui a consisté à :<br>
 * Définir les choix techniques (qui ont été présenté avec des captures d'écran dans la partie *Solutions tcheniques choisies* ).
 
-✔ Ananlyse qui a consisté à:
+✔ Ananlyse qui a consisté à:<br>
 * A déterminer comment implémenter chaque fonctionnalité de l'application
 * A définir le modèle conceptuel, relationnel et physique: 
 
@@ -191,13 +191,13 @@ modèle physique
 
 ![Modèle Physique](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/physique.jpeg)
 
-✔ Conception detaillée qui a consisté
+✔ Conception detaillée qui a consisté<br>
 * A déterminer le type de design souhaité pour l'interface graphique de l'application
 * A rediger les scripts de génération de la base
 
-✔  Codage qui a consisté 
+✔  Codage qui a consisté <br>
 * A rediger le code source des différentes pages de l'application
-* A rediger des scripts permettants d'interroger l'API Hal
+* A rediger des scripts permettants d'interroger l'API Hal<br>
 
 ✔ Tests qui a consisté à effectué des tests sur l'application afin de déterminer des bugs et les corriger
 
