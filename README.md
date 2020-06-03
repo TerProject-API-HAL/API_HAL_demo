@@ -21,7 +21,7 @@ Les fonctionnalités de HAL sont rendues disponibles par des services web (https
 Cette application présente plusieurs fonctionnalités à savoir:
 * Afficher le nombre de publication en fonction du type de publication et de l'année
 * Afficher la liste des publications en fonction du type de publication et de l'année
-* Afficher le graphisme présentatnt le nombre de  publication par type et par année
+* Afficher le graphisme présentant le nombre de  publication par type et par année
 * Rechercher les publications par type de publication
 * Rechercher les publications d'audiences nationales ou internationales
 * Rechercher les publications par année
@@ -29,22 +29,22 @@ Cette application présente plusieurs fonctionnalités à savoir:
 
 
 ### Scenario d'usages de l'application
-Cette application contient trois pages: <br>
+Cette application contient trois menus verticales: <br>
 
-✔ le dashbord: cette page permet,
+✔ Dashbord: en cliquant sur ce menu, nous avons la possibilité,
 * d'afficher le nombre de publication en fonction du type de publication et de l'année
 * d'afficher la liste des publications en fonction du type de publication et de l'année
 * d'afficher le graphisme présentatnt le nombre de  publication par type et par année
 <br>
 
- ✔ Publication search: cette page permet,
+ ✔ Publication search: en cliquant sur ce menu, nous avons la possibilité,
  * de rechercher les publications par type de publication
  * de rechercher les publications d'audiences nationales ou internationales
  * de rechercher les publications par année
 
 <br>
 
-✔ Publication Errors: cette page permet d'afficher la liste des erreurs de publication
+✔ Publication Errors: en cliquant sur ce menu, nous avons accès à la liste des erreurs de publication
 <br>
 
 1. Accès à l'application
@@ -54,79 +54,55 @@ Cette application contient trois pages: <br>
  
 2. Dashbord
 
-  *  Une fois sur la page, on peut visualiser le tableau  et le graphique. <br>
-
-  
+  *  Le menu Dashbord nous donne la possibilité de visualiser le tableau  et le graphique. <br>  
   ![Capture1](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture1.png)
   ![Capture2](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture2.png)
   
   
-  
-  *  Sur cette page nous pouvons aussi accéder à la liste des publications en double cliquant sur la colone qui affiche le nombre de publication <br>
-  *  Par exemple en double cliquant sur le nombre d'Article dans une revue publié en 2016 c'est à dire la colonne qui contient 7 cela affiche les 7 articles de revues publiés en 2016 <br>
-  
-  
+  *  Nous pouvons aussi accéder à la liste des publications en double cliquant sur la colone qui affiche le nombre de publication <br>
+  *  Par exemple on peut double cliquer sur le nombre d'Article dans une revue publié en 2016 c'est à dire la colonne qui contient 7 <br>
   ![Capture3](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture3.png)
  
-  
-  
-   3. Publication Search
-
-  *  Pour acceder à cette page, il faut cliquer sur l'onglet Publication Search 
-
-
-  
-  ![Capture5](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture5.png)
+  * cela affiche les 7 articles de revues publiés en 2016 <br>
+  ![Capture4](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture4.png)
  
   
-  
-   *  Cette page affiche par defaut la liste de toutes les publications éffectuées par les chercheurs du laboratoire DAVID.
+3. Publication Search
 
+  *  Pour rechercher les publications en fonction du type, de l'année, il faut cliquer sur l'onglet Publication Search 
+  ![Capture5](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture5.png)
 
-
   
-  ![Capture4](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture4.png)
+   *  Lorsqu'on clique sur l'onglet Publication Search , nous avons accès à la liste de toutes les publications éffectuées par les chercheurs
+    du laboratoire DAVID.
+  ![Capture6](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture6.png)
   
   
-  
-   * Cette page nous donne la possibilité de rechercher les publication en fonction du type de publication.
+   * Nous avons aussi la possibilité de rechercher les publication en fonction du type de publication.
    * Pour rechercher par exemple la liste des thèses, cliquez sur le ménu déroulant et cliquez sur thèse.
-
-
-
-  
   ![Capture7](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture7.png)
-
-
-  
   ![Capture8](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture8.png)
-
-
-
-   * Nous pouvons aussi rechercher la liste des publications d'audiences nationales et internationales.
-   * Pour rechercher par exemple la liste des publications d'audiences internationales.
-
-
-
-  
   ![Capture9](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture9.png)
 
 
-  
+   * Nous pouvons également rechercher la liste des publications d'audiences nationales et internationales.
+   * Pour rechercher par exemple la liste des publications d'audiences internationales.
   ![Capture10](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture10.png)
-   
-   
-   
-   * Nous pouvons rechercher la liste des publications par année
-   * Pour rechercher par exemple la liste des publications de l'année 2019
-
-
-  
   ![Capture11](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture11.png)
-
-
-  
+   
+   * En plus, nous pouvons rechercher la liste des publications par année
+   * Pour rechercher par exemple la liste des publications de l'année 2019
   ![Capture12](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture12.png)
+  ![Capture13](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture13.png)
+
+
+ 4. Publication Errors
+
+ Pour afficher les erreurs de publication, il faut cliquer sur l'onglet Publication Errors
+   ![Capture14](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture14.png)
+
+   Au clic de cet onglet nous avons accès à la liste des erreurs de publication
+  ![Capture15](https://github.com/TerProject-API-HAL/API_HAL_demo/blob/master/plugins/images/Capture15.png)
    
   
 ## Manuel technique
@@ -135,14 +111,15 @@ Cette application contient trois pages: <br>
  La conception de cette application a neccesité l'utilisation de plusieurs technologies:
 
  ✔ Au niveau du front-end nous avions utilisé : <br>
- * Bootstrap: C'est un framework utilisant les langages HTML, CSS et JavaScript fournit aux développeurs des outils pour créer un site facilement. Ce framework nous a permis d'impléménter un design responsive pour notre application.
+ * Bootstrap: C'est un framework utilisant les langages HTML, CSS, JavaScript et fournit aux développeurs des outils pour créer un site facilement. Ce framework nous a permis d'impléménter un design responsive pour notre application.
  * HTML: pour définir les différents éléments des pages de l'application
- * CSS: pour la mise en forme les différents contenus définis par le HTML 
+ * CSS: pour la mise en forme des différents contenus définis par le HTML 
  * JavaScript: pour rendre les pages de l'application dynamiques.
  * Plug-ins DataTables de Jquery: pour gérer la pagination, le filtrage et la sélection des données du tableau des statistiques au niveau de la page dashboard 
+ * Chart.js : C'est une bibliothèque JavaScript open source qui a été utilisé pour la visualisation des données du graphisme dans le dashboard
 
  ✔ Au niveau du back-end nous avions utilisé: <br>
-* JQuery: Nous avions utilisé ce langage pour effectuer des requêtes dans l'API HAL
+* JQuery: Nous avions utilisé ce framework de JavaScript pour effectuer des requêtes dans l'API HAL
 
 
 ### Conception du projet
@@ -151,7 +128,7 @@ Pour la conception du projet nous avons utilisé la méthodologie de gestion de 
 * Nous avions d'abord fait une étude de l'API HAL 
 * Ensuite, nous avions analysé les besoins du laboratoire DAVID
 * Puis, nous avions analysé les besoins de l'application
-* Enfin, nous avions divisé le projet en des tâches auquelles nous nous sommes reparties. Chaque tâche était d'abord planifié avant d'être exécuter cela nous permettait de d'excuter les differentes taches dans les meilleurs délais.
+* Enfin, nous avions divisé le projet en des tâches auquelles nous nous sommes reparties. Chaque tâche était d'abord planifié avant d'être exécuter cela nous permettait d'excuter les differentes tâches dans les meilleurs délais.
 
 
 ## Construction du projet
@@ -161,7 +138,7 @@ Pour la construction du projet nous avons utiliser l'outils de gestion de dépen
 
 ## Perspectives pour amélioration de l'application
 
-En perspective, cette application pourrait être amélioré en mettant en place un cache local qui permettra de dimunier le temps de réponse avec l'API Hal.
+En perspective, cette application pourrait être améliorée en mettant en place un cache local qui permettra de dimunier le temps de réponse avec l'API Hal.
 
 
 ## Auteurs
