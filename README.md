@@ -22,16 +22,19 @@ Cette application présente plusieurs fonctionnalités à savoir:<br>
 ✔ Afficher le nombre de publication en fonction du type de publication et de l'année<br>
 ✔ Afficher la liste des publications en fonction du type de publication et de l'année<br>
 ✔ Afficher le graphisme présentant le nombre de  publication par type et par année<br>
-✔ Rechercher les publications par type de publication: cette fonctionnalité nous donne la possibilité de:<br>
+✔ Rechercher les publications par type de publication: cette fonctionnalité nous donne la possibilité de:
+
 * Rechercher des communications dans un congrès
 * Rechercher des articles dans une revue
 * Rechercher les publications de type High Dynamic Range
 * Rechercher les publications de type Lecture
 * Rechercher des chapitres d'ouvrages
 * Rechercher des directions d'ouvrages
-* Rechercher des ouvrages y compris leur traduction<br>
+* Rechercher des ouvrages y compris leur traduction
+<br>
+
 ✔ Rechercher les publications d'audiences nationales ou internationales<br>
-✔ Rechercher les publications par année: cette fonctionnalité nous offre la possibilité de rechercher les publications de l'année 2015 à 2020
+✔ Rechercher les publications par année: cette fonctionnalité nous offre la possibilité de rechercher les publications de l'année 2015 à 2020<br>
 ✔ Afficher la liste des erreurs de publication<br>
 
 ### Scenario d'usages de l'application
@@ -213,10 +216,10 @@ Pour cela, nous avons crée un fichier package.json dans lequel nous avions déf
 ``
 {
     "name": "projet_API_Hal",
-    "version": "0.1.0",
-  "homepage": "https://github.com/TerProject-API-HAL/API-HAL-demo-website",
-  { "license" : "BSD-3-Clause" },
-    "dependencies": {
+    "version": "0.1.0", ``
+ `` "homepage": "https://github.com/TerProject-API-HAL/API-HAL-demo-website",``
+ `` { "license" : "BSD-3-Clause" }, ``
+ ``   "dependencies": {
         "markdown": "~0.4",
     "jquery": "~2.1.4",
     "Bootstrap": "4.5"
